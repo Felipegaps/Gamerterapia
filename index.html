@@ -135,11 +135,15 @@
 </head>
 <body class="min-h-screen flex flex-col">
 
-    <!-- Definição da Logo SVG -->
+    <!-- Definição da Logo SVG (Versão Preta com Contorno) -->
     <svg style="display: none;">
         <symbol id="icon-gamerterapia" viewBox="0 0 100 100">
-            <path d="M50,5 C25,5 10,25 10,48 C10,65 20,80 32,88 L32,95 L68,95 L68,88 C80,80 90,65 90,48 C90,25 75,5 50,5 Z" fill="black" stroke="white" stroke-width="2.5"/>
-            <path d="M35,45 Q35,38 50,38 Q65,38 65,45 L67,58 Q67,65 58,65 L54,62 L46,62 L42,65 Q33,65 33,58 Z" fill="white"/>
+            <path d="M50,5 C25,5 10,25 10,48 C10,65 20,80 32,88 L32,95 L68,95 L68,88 C80,80 90,65 90,48 C90,25 75,5 50,5 Z" 
+                  fill="black" 
+                  stroke="white" 
+                  stroke-width="2.5"/>
+            <path d="M35,45 Q35,38 50,38 Q65,38 65,45 L67,58 Q67,65 58,65 L54,62 L46,62 L42,65 Q33,65 33,58 Z" 
+                  fill="white"/>
             <circle cx="40" cy="50" r="1.5" fill="black" /><circle cx="40" cy="54" r="1.5" fill="black" /><circle cx="37" cy="52" r="1.5" fill="black" /><circle cx="43" cy="52" r="1.5" fill="black" /><circle cx="58" cy="48" r="1.2" fill="black" /><circle cx="58" cy="54" r="1.2" fill="black" /><circle cx="61" cy="51" r="1.2" fill="black" /><circle cx="55" cy="51" r="1.2" fill="black" />
         </symbol>
     </svg>
@@ -168,54 +172,192 @@
     </nav>
 
     <main class="flex-grow">
-        <!-- SESSÃO: INÍCIO -->
+        
+        <!-- SESSÃO: INÍCIO (TELA PRINCIPAL ENRIQUECIDA) -->
         <section id="inicio" class="active">
-            <header class="relative py-20 bg-gradient-to-br from-purple-900/20 to-pink-900/20 text-center border-b border-white/5">
-                <div class="max-w-7xl mx-auto px-4">
+            <!-- Hero High-End -->
+            <header class="relative py-24 bg-gradient-to-br from-purple-900/30 to-slate-900 text-center border-b border-white/5 overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+                    <div class="absolute top-10 left-10 w-64 h-64 bg-purple-500 rounded-full blur-[120px]"></div>
+                    <div class="absolute bottom-10 right-10 w-64 h-64 bg-pink-500 rounded-full blur-[120px]"></div>
+                </div>
+                <div class="max-w-7xl mx-auto px-4 relative z-10">
                     <svg class="h-40 w-40 mx-auto mb-8 logo-glow"><use xlink:href="#icon-gamerterapia"></use></svg>
-                    <h1 class="text-6xl md:text-8xl font-gaming font-bold mb-6 neon-text uppercase">Gamerterapia</h1>
-                    <p class="text-xl text-slate-400 max-w-2xl mx-auto mb-12 font-light italic text-transparent bg-clip-text bg-gradient-to-r from-white to-purple-400">
-                        Onde a tecnologia encontra a paixão pelos videojogos.
+                    <h1 class="text-6xl md:text-8xl font-gaming font-bold mb-6 neon-text uppercase tracking-tighter">Gamerterapia</h1>
+                    <p class="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto mb-12 font-light leading-relaxed">
+                        A intersecção entre a <span class="text-white font-bold">Arquitetura de TI</span> e o <span class="text-purple-400 font-bold uppercase">Universo Gamer</span>. 
+                        Do parafuso ao foguete, analisamos a tecnologia que move as tuas gameplays.
                     </p>
-                    <div class="max-w-4xl mx-auto glass-card p-2 rounded-3xl shadow-2xl">
+                    <div class="max-w-5xl mx-auto glass-card p-3 rounded-[2rem] shadow-2xl">
                         <div class="video-container">
-                            <iframe src="https://www.youtube.com/embed/R8LCdgIhdFU" title="Destaque Principal" allowfullscreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/R8LCdgIhdFU" title="Destaque: Pulse Elite" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
             </header>
             
-            <div class="max-w-7xl mx-auto px-4 py-16 text-center">
-                <h2 class="text-3xl font-gaming font-bold mb-12 uppercase tracking-widest text-primary">Destaques</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="glass-card p-6 rounded-2xl cursor-pointer" onclick="showSection('noticias')">
-                        <i class="fas fa-bolt text-3xl text-orange-500 mb-4"></i>
-                        <h3 class="text-lg font-bold mb-2 uppercase">Notícias</h3>
+            <!-- Quick Shortcuts Section -->
+            <div class="max-w-7xl mx-auto px-4 py-20">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="glass-card p-8 rounded-2xl text-center group cursor-pointer" onclick="showSection('noticias')">
+                        <div class="w-16 h-16 bg-orange-500/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-orange-500 transition-all duration-300">
+                            <i class="fas fa-bolt text-2xl text-orange-500 group-hover:text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-gaming font-bold mb-3 uppercase tracking-wider">Notícias</h3>
+                        <p class="text-slate-400 text-sm">O que há de mais recente no mercado global de hardware e jogos.</p>
                     </div>
-                    <div class="glass-card p-6 rounded-2xl cursor-pointer" onclick="showSection('reviews')">
-                        <i class="fas fa-microchip text-3xl text-purple-500 mb-4"></i>
-                        <h3 class="text-lg font-bold mb-2 uppercase">Reviews</h3>
+                    <div class="glass-card p-8 rounded-2xl text-center group cursor-pointer" onclick="showSection('reviews')">
+                        <div class="w-16 h-16 bg-purple-500/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-purple-500 transition-all duration-300">
+                            <i class="fas fa-microchip text-2xl text-purple-500 group-hover:text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-gaming font-bold mb-3 uppercase tracking-wider">Reviews</h3>
+                        <p class="text-slate-400 text-sm">Análises detalhadas com veredito técnico sobre periféricos.</p>
                     </div>
-                    <div class="glass-card p-6 rounded-2xl cursor-pointer" onclick="showSection('videos')">
-                        <i class="fas fa-play text-3xl text-red-500 mb-4"></i>
-                        <h3 class="text-lg font-bold mb-2 uppercase">Vídeos</h3>
+                    <div class="glass-card p-8 rounded-2xl text-center group cursor-pointer" onclick="showSection('videos')">
+                        <div class="w-16 h-16 bg-red-500/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-red-500 transition-all duration-300">
+                            <i class="fas fa-play text-2xl text-red-500 group-hover:text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-gaming font-bold mb-3 uppercase tracking-wider">Vídeos</h3>
+                        <p class="text-slate-400 text-sm">Gameplays, unboxings e vlogs do canal Gamerterapia.</p>
                     </div>
-                    <div class="glass-card p-6 rounded-2xl cursor-pointer" onclick="showSection('sobre')">
-                        <i class="fas fa-user-circle text-3xl text-blue-500 mb-4"></i>
-                        <h3 class="text-lg font-bold mb-2 uppercase">Sobre</h3>
+                    <div class="glass-card p-8 rounded-2xl text-center group cursor-pointer" onclick="showSection('sobre')">
+                        <div class="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-500 transition-all duration-300">
+                            <i class="fas fa-id-card text-2xl text-blue-500 group-hover:text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-gaming font-bold mb-3 uppercase tracking-wider">O Autor</h3>
+                        <p class="text-slate-400 text-sm">Conhece o Arquiteto por trás das análises de elite.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- News Preview Section -->
+            <div class="bg-slate-900/50 py-20 border-y border-white/5">
+                <div class="max-w-7xl mx-auto px-4">
+                    <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+                        <div>
+                            <h2 class="text-4xl font-gaming font-bold uppercase tracking-tighter"><span class="text-orange-500">Últimas</span> Manchetes</h2>
+                            <p class="text-slate-400 mt-2">Fica por dentro do que está a acontecer no mundo do silício e do entretenimento.</p>
+                        </div>
+                        <button onclick="showSection('noticias')" class="bg-white/5 hover:bg-white/10 px-8 py-3 rounded-full text-sm font-bold border border-white/10 transition">VER TODAS AS NOTÍCIAS</button>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- News Item 1 -->
+                        <div class="glass-card rounded-2xl overflow-hidden group cursor-pointer" onclick="openNews('news1')">
+                            <div class="h-48 bg-slate-800 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-110 transition duration-500 opacity-60">
+                            </div>
+                            <div class="p-6">
+                                <span class="source-tag mb-4 inline-block">Grandes Rumores</span>
+                                <h4 class="text-xl font-gaming font-bold leading-tight line-clamp-2">GTA VI: IA de NPCs e Física Dinâmica</h4>
+                                <p class="text-slate-400 text-sm mt-3 line-clamp-2">O motor RAGE 9 promete revolucionar a interação com NPCs e física de fluidos...</p>
+                            </div>
+                        </div>
+                        <!-- News Item 2 -->
+                        <div class="glass-card rounded-2xl overflow-hidden group cursor-pointer" onclick="openNews('news5')">
+                            <div class="h-48 bg-slate-800 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-110 transition duration-500 opacity-60">
+                            </div>
+                            <div class="p-6">
+                                <span class="source-tag mb-4 inline-block">Hardware Master</span>
+                                <h4 class="text-xl font-gaming font-bold leading-tight line-clamp-2">RTX 5090: A Revolução GDDR7</h4>
+                                <p class="text-slate-400 text-sm mt-3 line-clamp-2">Análise técnica sobre o salto de largura de banda na próxima geração NVIDIA Blackwell.</p>
+                            </div>
+                        </div>
+                        <!-- News Item 3 -->
+                        <div class="glass-card rounded-2xl overflow-hidden group cursor-pointer" onclick="openNews('news33')">
+                            <div class="h-48 bg-slate-800 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-110 transition duration-500 opacity-60">
+                            </div>
+                            <div class="p-6">
+                                <span class="source-tag mb-4 inline-block">AMD News</span>
+                                <h4 class="text-xl font-gaming font-bold leading-tight line-clamp-2">AMD Ryzen 9000X3D Performance</h4>
+                                <p class="text-slate-400 text-sm mt-3 line-clamp-2">Os novos processadores que prometem dominar o gaming competitivo com V-Cache.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Brand Philosophy Section -->
+            <div class="max-w-7xl mx-auto px-4 py-24">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="space-y-8">
+                        <h2 class="text-5xl font-gaming font-bold leading-none uppercase">A Nossa <span class="text-primary italic">Filosofia</span></h2>
+                        <div class="space-y-6">
+                            <div class="flex gap-4">
+                                <div class="text-3xl text-purple-500 font-bold">01.</div>
+                                <div>
+                                    <h4 class="text-xl font-gaming font-bold mb-1">DO PARAFUSO AO FOGUETE</h4>
+                                    <p class="text-slate-400 leading-relaxed">Acreditamos que a tecnologia deve ser entendida desde a sua base. Seja um simples comando ou um servidor de datacenter, analisamos a infraestrutura que faz tudo funcionar.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="text-3xl text-pink-500 font-bold">02.</div>
+                                <div>
+                                    <h4 class="text-xl font-gaming font-bold mb-1">INCENDEIE O SEU CORAÇÃO</h4>
+                                    <p class="text-slate-400 leading-relaxed">Gaming é paixão. Inspirados na determinação dos Hashiras e na evolução dos Saiyajins, trazemos conteúdo que motiva e ensina com alma.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="text-3xl text-blue-500 font-bold">03.</div>
+                                <div>
+                                    <h4 class="text-xl font-gaming font-bold mb-1">RIGOR TÉCNICO DE ELITE</h4>
+                                    <p class="text-slate-400 leading-relaxed">Não somos apenas entusiastas. Aplicamos o conhecimento de um Arquiteto de Soluções Dell para validar cada componente e análise.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button onclick="showSection('sobre')" class="bg-primary hover:bg-primary/80 px-10 py-4 rounded-xl font-bold transition shadow-xl shadow-primary/20 uppercase tracking-widest">Saiba Mais Sobre Nós</button>
+                    </div>
+                    <div class="relative">
+                        <div class="absolute -inset-4 bg-gradient-to-tr from-purple-500/20 to-transparent blur-3xl opacity-50"></div>
+                        <div class="glass-card p-8 rounded-3xl relative z-10 border-l-8 border-primary">
+                            <p class="text-3xl font-gaming font-bold italic leading-tight text-white">
+                                "Não é apenas sobre jogar, é sobre entender a engenharia que torna cada frame possível."
+                            </p>
+                            <div class="mt-8 flex items-center gap-4">
+                                <div class="w-12 h-1 bg-primary"></div>
+                                <span class="uppercase tracking-widest font-bold text-slate-500">Manifesto Gamerterapia</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Quick Preview Section -->
+            <div class="bg-gradient-to-b from-slate-900 to-black py-20 border-t border-white/5">
+                <div class="max-w-7xl mx-auto px-4 text-center">
+                    <h2 class="text-4xl font-gaming font-bold mb-4 uppercase tracking-tighter text-red-500">Últimas Gameplays</h2>
+                    <p class="text-slate-400 mb-12">Assiste às nossas produções mais recentes diretamente do YouTube.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                        <div class="glass-card rounded-xl overflow-hidden group cursor-pointer">
+                            <img src="https://img.youtube.com/vi/WHT6jO89qN0/mqdefault.jpg" class="w-full opacity-60 group-hover:opacity-100 transition duration-300">
+                            <div class="p-3 text-xs font-bold uppercase tracking-tighter">Hogwarts Legacy Guide</div>
+                        </div>
+                        <div class="glass-card rounded-xl overflow-hidden group cursor-pointer">
+                            <img src="https://img.youtube.com/vi/dHQGiFsADqQ/mqdefault.jpg" class="w-full opacity-60 group-hover:opacity-100 transition duration-300">
+                            <div class="p-3 text-xs font-bold uppercase tracking-tighter">Giro BGS 2024</div>
+                        </div>
+                        <div class="glass-card rounded-xl overflow-hidden group cursor-pointer">
+                            <img src="https://img.youtube.com/vi/rbwKpl114Jo/mqdefault.jpg" class="w-full opacity-60 group-hover:opacity-100 transition duration-300">
+                            <div class="p-3 text-xs font-bold uppercase tracking-tighter">PS5 Launch Tips</div>
+                        </div>
+                        <div class="glass-card rounded-xl overflow-hidden group cursor-pointer">
+                            <img src="https://img.youtube.com/vi/s2dAIwKujFA/mqdefault.jpg" class="w-full opacity-60 group-hover:opacity-100 transition duration-300">
+                            <div class="p-3 text-xs font-bold uppercase tracking-tighter">Arcade DIY Project</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SESSÃO: NOTÍCIAS -->
+        <!-- SESSÃO: NOTÍCIAS (FEED COMPLETO) -->
         <section id="noticias" class="max-w-7xl mx-auto px-4 py-16">
             <div id="noticias-lista">
                 <h2 class="text-4xl font-gaming font-bold mb-12 text-center uppercase tracking-tighter">Portal de <span class="text-orange-500">Notícias</span></h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="news-grid"></div>
             </div>
             <div id="news-container" class="max-w-4xl mx-auto hidden">
-                <button onclick="closeNews()" class="mb-8 text-slate-400 hover:text-white transition flex items-center gap-2"><i class="fas fa-arrow-left"></i> Voltar</button>
+                <button onclick="closeNews()" class="mb-8 text-slate-400 hover:text-white transition flex items-center gap-2"><i class="fas fa-arrow-left"></i> Voltar à Central</button>
                 <div id="news-details-wrapper"></div>
             </div>
         </section>
@@ -226,147 +368,21 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <article class="glass-card rounded-2xl overflow-hidden">
                     <div class="video-container"><iframe src="https://www.youtube.com/embed/R8LCdgIhdFU" allowfullscreen></iframe></div>
-                    <div class="p-6"><h3 class="text-2xl font-bold mb-2 uppercase font-gaming">Pulse Elite Wireless</h3><p class="text-slate-400 text-sm">Análise técnica completa sobre o som planar magnético.</p></div>
+                    <div class="p-6"><h3 class="text-2xl font-bold mb-2 uppercase font-gaming">Pulse Elite Wireless</h3><p class="text-slate-400 text-sm">Análise técnica focada em áudio planar magnético para o PS5.</p></div>
                 </article>
                 <article class="glass-card rounded-2xl overflow-hidden">
                     <div class="video-container"><iframe src="https://www.youtube.com/embed/4A8L1gpbQxo" allowfullscreen></iframe></div>
-                    <div class="p-6"><h3 class="text-xl font-bold mb-2 uppercase font-gaming">Xbox Series S</h3><p class="text-slate-400 text-sm">Vale a pena em 2024? Testamos o gigante compacto.</p></div>
+                    <div class="p-6"><h3 class="text-xl font-bold mb-2 uppercase font-gaming">Xbox Series S</h3><p class="text-slate-400 text-sm">Avaliamos o pequeno notável da Microsoft em 2026.</p></div>
                 </article>
             </div>
         </section>
 
-        <!-- SESSÃO: VÍDEOS (EXPANDIDA COM 14 VÍDEOS REAIS E VALIDADOS) -->
+        <!-- SESSÃO: VÍDEOS (GALERIA COMPLETA) -->
         <section id="videos" class="max-w-7xl mx-auto px-4 py-16">
             <h2 class="text-4xl font-gaming font-bold mb-12 text-center uppercase tracking-tighter text-red-500 italic">Playlists <span class="text-white">Gamerterapia</span></h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                <!-- Vídeo 1 -->
-                <div class="glass-card rounded-xl overflow-hidden group border-b-2 border-purple-500">
-                    <div class="relative aspect-video">
-                        <img src="https://img.youtube.com/vi/R8LCdgIhdFU/mqdefault.jpg" class="w-full object-cover">
-                        <a href="https://www.youtube.com/watch?v=R8LCdgIhdFU" target="_blank" class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"><i class="fas fa-play-circle text-4xl"></i></a>
-                    </div>
-                    <div class="p-4"><h3 class="text-sm font-bold mb-2">Pulse Elite: Unboxing</h3><p class="text-xs text-slate-400 leading-tight">Análise detalhada do novo headset da Sony com tecnologia de som planar magnético.</p></div>
-                </div>
-
-                <!-- Vídeo 2 -->
-                <div class="glass-card rounded-xl overflow-hidden group border-b-2 border-green-500">
-                    <div class="relative aspect-video">
-                        <img src="https://img.youtube.com/vi/4A8L1gpbQxo/mqdefault.jpg" class="w-full">
-                        <a href="https://www.youtube.com/watch?v=4A8L1gpbQxo" target="_blank" class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"><i class="fas fa-play-circle text-4xl"></i></a>
-                    </div>
-                    <div class="p-4"><h3 class="text-sm font-bold mb-2">Xbox Series S: Unboxing</h3><p class="text-xs text-slate-400 leading-tight">O primeiro unboxing Microsoft do canal. Veja o tamanho e as especificações reais.</p></div>
-                </div>
-
-                <!-- Vídeo 3 -->
-                <div class="glass-card rounded-xl overflow-hidden group border-b-2 border-yellow-500">
-                    <div class="relative aspect-video">
-                        <img src="https://img.youtube.com/vi/WHT6jO89qN0/mqdefault.jpg" class="w-full">
-                        <a href="https://www.youtube.com/watch?v=WHT6jO89qN0" target="_blank" class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"><i class="fas fa-play-circle text-4xl"></i></a>
-                    </div>
-                    <div class="p-4"><h3 class="text-sm font-bold mb-2">Hogwarts Legacy: Vassouras</h3><p class="text-xs text-slate-400 leading-tight">Guia completo para destravar o voo e os locais de compra em Hogsmeade.</p></div>
-                </div>
-
-                <!-- Vídeo 4 -->
-                <div class="glass-card rounded-xl overflow-hidden group border-b-2 border-red-500">
-                    <div class="relative aspect-video">
-                        <img src="https://img.youtube.com/vi/dHQGiFsADqQ/mqdefault.jpg" class="w-full">
-                        <a href="https://www.youtube.com/watch?v=dHQGiFsADqQ" target="_blank" class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"><i class="fas fa-play-circle text-4xl"></i></a>
-                    </div>
-                    <div class="p-4"><h3 class="text-sm font-bold mb-2">Gamerterapia na BGS</h3><p class="text-xs text-slate-400 leading-tight">Um passeio rápido pelo evento conferindo as novidades e tecnologias gaming.</p></div>
-                </div>
-
-                <!-- Vídeo 5 -->
-                <div class="glass-card rounded-xl overflow-hidden group border-b-2 border-blue-500">
-                    <div class="relative aspect-video">
-                        <img src="https://img.youtube.com/vi/rbwKpl114Jo/mqdefault.jpg" class="w-full">
-                        <a href="https://www.youtube.com/watch?v=rbwKpl114Jo" target="_blank" class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"><i class="fas fa-play-circle text-4xl"></i></a>
-                    </div>
-                    <div class="p-4"><h3 class="text-sm font-bold mb-2">PS5: Dicas de Lançamento</h3><p class="text-xs text-slate-400 leading-tight">Informações cruciais e configurações iniciais para quem comprou o PlayStation 5.</p></div>
-                </div>
-
-                <!-- Vídeo 6 -->
-                <div class="glass-card rounded-xl overflow-hidden group border-b-2 border-red-600">
-                    <div class="relative aspect-video">
-                        <img src="https://img.youtube.com/vi/s2dAIwKujFA/mqdefault.jpg" class="w-full">
-                        <a href="https://www.youtube.com/watch?v=s2dAIwKujFA" target="_blank" class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"><i class="fas fa-play-circle text-4xl"></i></a>
-                    </div>
-                    <div class="p-4"><h3 class="text-sm font-bold mb-2">Arcade DIY: Projeto Final</h3><p class="text-xs text-slate-400 leading-tight">Vídeo mostrando a conclusão do projeto de arcade montado em casa com peças dedicadas.</p></div>
-                </div>
-
-                <!-- Vídeo 7 -->
-                <div class="glass-card rounded-xl overflow-hidden group border-b-2 border-cyan-400">
-                    <div class="relative aspect-video">
-                        <img src="https://img.youtube.com/vi/r770poPzEig/mqdefault.jpg" class="w-full">
-                        <a href="https://www.youtube.com/watch?v=r770poPzEig" target="_blank" class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"><i class="fas fa-play-circle text-4xl"></i></a>
-                    </div>
-                    <div class="p-4"><h3 class="text-sm font-bold mb-2">Samsung na BGS</h3><p class="text-xs text-slate-400 leading-tight">Destaques técnicos no estande da Samsung, focando em monitores e painéis OLED.</p></div>
-                </div>
-
-                <!-- Vídeo 8 -->
-                <div class="glass-card rounded-xl overflow-hidden group border-b-2 border-orange-500">
-                    <div class="relative aspect-video">
-                        <img src="https://img.youtube.com/vi/90Gv0h0bMTo/mqdefault.jpg" class="w-full">
-                        <a href="https://www.youtube.com/watch?v=90Gv0h0bMTo" target="_blank" class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"><i class="fas fa-play-circle text-4xl"></i></a>
-                    </div>
-                    <div class="p-4"><h3 class="text-sm font-bold mb-2">DBZ Kakarot Gameplay</h3><p class="text-xs text-slate-400 leading-tight">Explorando o mundo aberto de Dragon Ball com os combates clássicos da série Z.</p></div>
-                </div>
-
-                <!-- Vídeo 9 -->
-                <div class="glass-card rounded-xl overflow-hidden group border-b-2 border-red-400">
-                    <div class="relative aspect-video">
-                        <img src="https://img.youtube.com/vi/D5R-8X8P3jE/mqdefault.jpg" class="w-full">
-                        <a href="https://www.youtube.com/watch?v=D5R-8X8P3jE" target="_blank" class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"><i class="fas fa-play-circle text-4xl"></i></a>
-                    </div>
-                    <div class="p-4"><h3 class="text-sm font-bold mb-2">Demon Slayer Gameplay</h3><p class="text-xs text-slate-400 leading-tight">Combates intensos inspirados nos Hashiras e na determinação dos caçadores de onis.</p></div>
-                </div>
-
-                <!-- Vídeo 10 -->
-                <div class="glass-card rounded-xl overflow-hidden group border-b-2 border-blue-300">
-                    <div class="relative aspect-video">
-                        <img src="https://img.youtube.com/vi/L59B-v1qD88/mqdefault.jpg" class="w-full">
-                        <a href="https://www.youtube.com/watch?v=L59B-v1qD88" target="_blank" class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"><i class="fas fa-play-circle text-4xl"></i></a>
-                    </div>
-                    <div class="p-4"><h3 class="text-sm font-bold mb-2">Elden Ring Shadow Tech</h3><p class="text-xs text-slate-400 leading-tight">Análise visual da expansão do jogo do ano, focando na direção artística e performance.</p></div>
-                </div>
-
-                <!-- Vídeo 11 -->
-                <div class="glass-card rounded-xl overflow-hidden group border-b-2 border-indigo-500">
-                    <div class="relative aspect-video">
-                        <img src="https://img.youtube.com/vi/f0-9S2v7vS8/mqdefault.jpg" class="w-full">
-                        <a href="https://www.youtube.com/watch?v=f0-9S2v7vS8" target="_blank" class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"><i class="fas fa-play-circle text-4xl"></i></a>
-                    </div>
-                    <div class="p-4"><h3 class="text-sm font-bold mb-2">Street Fighter 6 Drive</h3><p class="text-xs text-slate-400 leading-tight">Dominando as novas mecânicas de Drive e estratégias para subir no ranking.</p></div>
-                </div>
-
-                <!-- Vídeo 12 -->
-                <div class="glass-card rounded-xl overflow-hidden group border-b-2 border-red-700">
-                    <div class="relative aspect-video">
-                        <img src="https://img.youtube.com/vi/X_zQo-H9U4Y/mqdefault.jpg" class="w-full">
-                        <a href="https://www.youtube.com/watch?v=X_zQo-H9U4Y" target="_blank" class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"><i class="fas fa-play-circle text-4xl"></i></a>
-                    </div>
-                    <div class="p-4"><h3 class="text-sm font-bold mb-2">Spider-Man 2 PS5 Tech</h3><p class="text-xs text-slate-400 leading-tight">Teste do carregamento ultra rápido e do balanço com teia no hardware da Sony.</p></div>
-                </div>
-
-                <!-- Vídeo 13 -->
-                <div class="glass-card rounded-xl overflow-hidden group border-b-2 border-slate-600">
-                    <div class="relative aspect-video">
-                        <img src="https://img.youtube.com/vi/975hM8G_H-Y/mqdefault.jpg" class="w-full">
-                        <a href="https://www.youtube.com/watch?v=975hM8G_H-Y" target="_blank" class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"><i class="fas fa-play-circle text-4xl"></i></a>
-                    </div>
-                    <div class="p-4"><h3 class="text-sm font-bold mb-2">Tekken 8: Unreal Engine 5</h3><p class="text-xs text-slate-400 leading-tight">Análise técnica do impacto gráfico da UE5 nos modelos de lutadores e cenários.</p></div>
-                </div>
-
-                <!-- Vídeo 14 -->
-                <div class="glass-card rounded-xl overflow-hidden group border-b-2 border-blue-900">
-                    <div class="relative aspect-video">
-                        <img src="https://img.youtube.com/vi/bE_Xo4XzF3g/mqdefault.jpg" class="w-full">
-                        <a href="https://www.youtube.com/watch?v=bE_Xo4XzF3g" target="_blank" class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"><i class="fas fa-play-circle text-4xl"></i></a>
-                    </div>
-                    <div class="p-4"><h3 class="text-sm font-bold mb-2">FFVII Rebirth Exploration</h3><p class="text-xs text-slate-400 leading-tight">Um vislumbre sobre o mundo aberto massivo e a fidelidade técnica do novo Final Fantasy.</p></div>
-                </div>
+            <div id="videos-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Vídeos serão populados via JS se preferir, ou mantidos hardcoded como no index.html anterior -->
             </div>
-
             <div class="mt-12 text-center">
                 <a href="https://www.youtube.com/@GAMERTERAPIA" target="_blank" class="bg-red-600 hover:bg-red-700 px-10 py-4 rounded-xl font-bold transition inline-block uppercase shadow-lg shadow-red-600/40">Ver Tudo no Youtube</a>
             </div>
@@ -376,34 +392,41 @@
         <section id="sobre" class="max-w-7xl mx-auto px-4 py-16">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <div class="space-y-8">
-                    <h2 class="text-5xl font-gaming font-bold uppercase neon-text">Gamerterapia</h2>
+                    <h2 class="text-5xl font-gaming font-bold uppercase neon-text">Felipe Lacerda</h2>
                     <div class="space-y-6">
                         <div class="glass-card p-6 rounded-2xl border-l-4 border-blue-500">
-                            <h3 class="text-2xl font-gaming font-bold text-blue-500 mb-2">Arquitetura Tech</h3>
-                            <p class="text-slate-300">Unimos o rigor técnico da infraestrutura de TI com a paixão pelos videojogos. Uma visão profissional sobre o hardware que amamos.</p>
+                            <h3 class="text-2xl font-gaming font-bold text-blue-500 mb-2">Solution Architect</h3>
+                            <p class="text-slate-300">Representando a excelência tecnológica da Dell na TD Synnex. Especialista em infraestrutura e hardware de alta performance.</p>
                         </div>
                         <div class="glass-card p-6 rounded-2xl border-l-4 border-purple-500">
-                            <h3 class="text-2xl font-gaming font-bold text-purple-500 mb-2">Comunidade Geek</h3>
-                            <p class="text-slate-300">Espaço dedicado a entusiastas que buscam análises sinceras e gameplays de alta qualidade.</p>
+                            <h3 class="text-2xl font-gaming font-bold text-purple-500 mb-2">Cultura Geek</h3>
+                            <p class="text-slate-300">Nascido em 1989, ariano e fã fervoroso de Vegeta (DBZ) e dos Hashiras (Demon Slayer). Incendeie o seu coração!</p>
                         </div>
                     </div>
                 </div>
                 <div class="glass-card p-8 rounded-3xl border border-white/10 text-center">
-                    <div class="w-40 h-40 mx-auto mb-6 logo-glow">
-                        <svg class="w-full h-full"><use xlink:href="#icon-gamerterapia"></use></svg>
+                    <div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary">
+                        <img src="https://share.google/images/NMzblQOt1njYPU5a0" class="w-full h-full object-cover" alt="Perfil" onerror="this.src='https://ui-avatars.com/api/?name=Felipe+Lacerda&background=8b5cf6'">
                     </div>
-                    <h4 class="text-2xl font-gaming font-bold uppercase mb-2">Central de Análise</h4>
-                    <p class="text-slate-400 italic">"Gamerterapia: Tecnologia e Entretenimento"</p>
+                    <h4 class="text-2xl font-gaming font-bold uppercase mb-2">Incendeie o seu coração</h4>
+                    <p class="text-slate-400 italic">"Para o Arthur, o meu Player 2 que chega em breve."</p>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-slate-950 py-12 border-t border-white/5 mt-20 text-center">
+    <footer class="bg-slate-950 py-16 border-t border-white/5 mt-20 text-center">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="flex flex-col items-center gap-4 mb-6">
-                <svg class="h-16 w-16 logo-glow"><use xlink:href="#icon-gamerterapia"></use></svg>
-                <span class="font-gaming text-xl font-bold tracking-tighter neon-text uppercase">Gamerterapia</span>
+            <div class="flex flex-col items-center gap-6 mb-8">
+                <svg class="h-20 w-20 logo-glow"><use xlink:href="#icon-gamerterapia"></use></svg>
+                <div class="font-gaming text-3xl font-bold tracking-tighter neon-text uppercase">Gamerterapia</div>
+            </div>
+            <p class="text-slate-500 max-w-md mx-auto mb-10 italic">
+                A unir a precisão da arquitetura de soluções com a paixão pelo entretenimento. Do parafuso ao foguete.
+            </p>
+            <div class="flex justify-center gap-8 text-2xl text-slate-400 mb-12">
+                <a href="https://www.youtube.com/@GAMERTERAPIA" target="_blank" class="hover:text-red-500 transition"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.facebook.com/gamerterapia" target="_blank" class="hover:text-blue-500 transition"><i class="fab fa-facebook"></i></a>
             </div>
             <p class="text-slate-600 text-xs uppercase tracking-widest italic">Análises • Hardware • Cultura Geek • 2026</p>
         </div>
@@ -416,28 +439,65 @@
             { id: "news33", title: "AMD Ryzen 9000X3D: Performance", tag: "AMD", content: "Novos CPUs prometem dominar o gaming com tecnologia 3D V-Cache.", source: "AMD Computex" }
         ];
 
+        const videosList = [
+            { id: "R8LCdgIhdFU", title: "Pulse Elite: Unboxing", desc: "Análise técnica do som planar magnético.", color: "purple" },
+            { id: "4A8L1gpbQxo", title: "Xbox Series S: Unboxing", desc: "Custo-benefício para o Game Pass.", color: "green" },
+            { id: "WHT6jO89qN0", title: "Hogwarts: Guia de Voo", desc: "Liberação de vassouras e exploração.", color: "yellow" },
+            { id: "dHQGiFsADqQ", title: "Gamerterapia na BGS", desc: "Giro de novidades na feira.", color: "purple" },
+            { id: "rbwKpl114Jo", title: "PS5: Dicas Fundamentais", desc: "Configurações cruciais para o console.", color: "blue" },
+            { id: "s2dAIwKujFA", title: "Arcade DIY Project", desc: "Montagem completa de um arcade caseiro.", color: "red" },
+            { id: "90Gv0h0bMTo", title: "DBZ Kakarot Gameplay", desc: "A jornada de Vegeta no mundo aberto.", color: "orange" },
+            { id: "D5R-8X8P3jE", title: "Demon Slayer Gameplay", desc: "Determinação dos Hashiras no combate.", color: "red" }
+        ];
+
         function showSection(sectionId) {
             const sections = document.querySelectorAll('section');
             sections.forEach(s => s.classList.remove('active'));
             const buttons = document.querySelectorAll('.nav-btn');
             buttons.forEach(b => b.classList.remove('nav-btn-active'));
+            
             const element = document.getElementById(sectionId);
             if (element) element.classList.add('active');
+            
             const activeBtn = document.getElementById('btn-' + sectionId);
             if(activeBtn) activeBtn.classList.add('nav-btn-active');
+
             if (sectionId === 'noticias') closeNews();
             window.scrollTo(0, 0);
         }
 
         function openNews(newsId) {
             const news = newsData.find(n => n.id === newsId);
-            if (!news) return;
+            if (!news) {
+                // Mock content for demonstration of missing news IDs
+                showSection('noticias');
+                const list = document.getElementById('noticias-lista');
+                const container = document.getElementById('news-container');
+                const wrapper = document.getElementById('news-details-wrapper');
+                list.classList.add('hidden');
+                container.classList.remove('hidden');
+                wrapper.innerHTML = `<div class="news-detail active space-y-6"><span class="source-tag">Indústria</span><h2 class="text-4xl font-gaming font-bold leading-tight text-primary">Manchete Detalhada</h2><p class="text-slate-300">Conteúdo aprofundado sobre este tópico está a ser carregado...</p></div>`;
+                return;
+            };
+
             const list = document.getElementById('noticias-lista');
             const container = document.getElementById('news-container');
             const wrapper = document.getElementById('news-details-wrapper');
+            
             list.classList.add('hidden');
             container.classList.remove('hidden');
-            wrapper.innerHTML = `<div class="news-detail active space-y-6"><span class="source-tag">${news.tag}</span><h2 class="text-4xl font-gaming font-bold leading-tight text-primary">${news.title}</h2><div class="text-slate-300 text-lg leading-relaxed">${news.content}</div><p class="text-sm text-slate-400 font-bold">Fonte: ${news.source}</p></div>`;
+            
+            wrapper.innerHTML = `
+                <div class="news-detail active space-y-6">
+                    <span class="source-tag">${news.tag}</span>
+                    <h2 class="text-4xl font-gaming font-bold leading-tight text-primary">${news.title}</h2>
+                    <div class="text-slate-300 text-lg leading-relaxed">${news.content}</div>
+                    <div class="bg-slate-800/50 p-6 rounded-xl border border-white/5 mt-8">
+                        <h5 class="text-white font-bold mb-2 uppercase tracking-widest text-xs">Fontes:</h5>
+                        <p class="text-sm text-slate-400 font-bold">${news.source}</p>
+                    </div>
+                </div>
+            `;
             window.scrollTo(0, 0);
         }
 
@@ -448,14 +508,40 @@
             if (container) container.classList.add('hidden');
         }
 
-        function initNewsGrid() {
-            const grid = document.getElementById('news-grid');
-            if(!grid) return;
-            grid.innerHTML = newsData.map(news => `<article class="glass-card rounded-xl overflow-hidden cursor-pointer" onclick="openNews('${news.id}')"><div class="h-40 bg-slate-800 flex items-center justify-center p-4"><svg class="h-20 w-20 opacity-20"><use xlink:href="#icon-gamerterapia"></use></svg></div><div class="p-4"><span class="source-tag">${news.tag}</span><h3 class="text-lg font-gaming font-bold mt-2 line-clamp-2">${news.title}</h3></div></article>`).join('');
+        function initApp() {
+            // Populate News Grid
+            const newsGrid = document.getElementById('news-grid');
+            if(newsGrid) {
+                newsGrid.innerHTML = newsData.map(news => `
+                    <article class="glass-card rounded-xl overflow-hidden cursor-pointer" onclick="openNews('${news.id}')">
+                        <div class="h-40 bg-slate-800 flex items-center justify-center p-4">
+                            <svg class="h-20 w-20 opacity-20"><use xlink:href="#icon-gamerterapia"></use></svg>
+                        </div>
+                        <div class="p-4">
+                            <span class="source-tag">${news.tag}</span>
+                            <h3 class="text-lg font-gaming font-bold mt-2 line-clamp-2">${news.title}</h3>
+                        </div>
+                    </article>
+                `).join('');
+            }
+
+            // Populate Videos Grid
+            const videosGrid = document.getElementById('videos-grid');
+            if(videosGrid) {
+                videosGrid.innerHTML = videosList.map(v => `
+                    <div class="glass-card rounded-xl overflow-hidden group border-b-2 border-${v.color}-500">
+                        <div class="relative aspect-video">
+                            <img src="https://img.youtube.com/vi/${v.id}/mqdefault.jpg" class="w-full object-cover">
+                            <a href="https://www.youtube.com/watch?v=${v.id}" target="_blank" class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"><i class="fas fa-play-circle text-4xl text-white"></i></a>
+                        </div>
+                        <div class="p-4"><h3 class="text-sm font-bold mb-2">${v.title}</h3><p class="text-xs text-slate-400 leading-tight">${v.desc}</p></div>
+                    </div>
+                `).join('');
+            }
         }
 
         window.onload = () => {
-            initNewsGrid();
+            initApp();
             showSection('inicio');
         }
     </script>
