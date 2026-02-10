@@ -74,8 +74,18 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        .adrenaline-gradient {
-            background: linear-gradient(90deg, #f39c12, #e74c3c);
+        .news-detail {
+            display: none;
+        }
+
+        .news-detail.active {
+            display: block;
+            animation: slideIn 0.4s ease-out;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; scale: 0.95; }
+            to { opacity: 1; scale: 1; }
         }
 
         .profile-border {
@@ -94,8 +104,9 @@
                     <i class="fas fa-gamepad text-3xl text-purple-500"></i>
                     <span class="font-gaming text-2xl font-bold tracking-tighter neon-text uppercase">Gamerterapia</span>
                 </div>
-                <div class="hidden md:flex space-x-8 uppercase font-bold tracking-widest text-sm">
+                <div class="hidden md:flex space-x-6 uppercase font-bold tracking-widest text-sm">
                     <button onclick="showSection('inicio')" class="nav-btn transition hover:text-purple-400" id="btn-inicio">Início</button>
+                    <button onclick="showSection('noticias')" class="nav-btn transition hover:text-purple-400" id="btn-noticias">Notícias</button>
                     <button onclick="showSection('reviews')" class="nav-btn transition hover:text-purple-400" id="btn-reviews">Reviews</button>
                     <button onclick="showSection('videos')" class="nav-btn transition hover:text-purple-400" id="btn-videos">Vídeos</button>
                     <button onclick="showSection('setup')" class="nav-btn transition hover:text-purple-400" id="btn-setup">Setup</button>
@@ -120,7 +131,7 @@
                     <p class="text-xl text-slate-400 max-w-2xl mx-auto mb-12 font-light italic text-transparent bg-clip-text bg-gradient-to-r from-white to-purple-400">
                         Onde a paixão por hardware e o universo geek se encontram.
                     </p>
-                    <div class="max-w-4xl mx-auto glass-card p-2 rounded-3xl shadow-2xl">
+                    <div class="max-w-4xl mx-auto glass-card p-2 rounded-3xl shadow-2xl cursor-pointer" onclick="showSection('noticias')">
                         <div class="video-container">
                             <iframe src="https://www.youtube.com/embed/R8LCdgIhdFU" title="Destaque Principal" allowfullscreen></iframe>
                         </div>
@@ -130,21 +141,109 @@
             
             <div class="max-w-7xl mx-auto px-4 py-16 text-center">
                 <h2 class="text-3xl font-gaming font-bold mb-12 uppercase tracking-widest">Explore o Conteúdo</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="glass-card p-8 rounded-2xl cursor-pointer" onclick="showSection('reviews')">
-                        <i class="fas fa-search-plus text-4xl text-purple-500 mb-4"></i>
-                        <h3 class="text-xl font-bold mb-2">Análises Detalhadas</h3>
-                        <p class="text-slate-400 text-sm">Hardware e consoles sob uma perspectiva técnica e profissional.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="glass-card p-6 rounded-2xl cursor-pointer" onclick="showSection('noticias')">
+                        <i class="fas fa-newspaper text-3xl text-orange-500 mb-4"></i>
+                        <h3 class="text-lg font-bold mb-2">Notícias</h3>
+                        <p class="text-slate-400 text-xs">O que está rolando agora no mundo gamer.</p>
                     </div>
-                    <div class="glass-card p-8 rounded-2xl cursor-pointer" onclick="showSection('videos')">
-                        <i class="fas fa-play-circle text-4xl text-red-500 mb-4"></i>
-                        <h3 class="text-xl font-bold mb-2">Gameplays & Guia</h3>
-                        <p class="text-slate-400 text-sm">Explorando mundos fantásticos, de RPGs a clássicos do anime.</p>
+                    <div class="glass-card p-6 rounded-2xl cursor-pointer" onclick="showSection('reviews')">
+                        <i class="fas fa-search-plus text-3xl text-purple-500 mb-4"></i>
+                        <h3 class="text-lg font-bold mb-2">Reviews</h3>
+                        <p class="text-slate-400 text-xs">Hardware sob perspectiva técnica.</p>
                     </div>
-                    <div class="glass-card p-8 rounded-2xl cursor-pointer" onclick="showSection('sobre')">
-                        <i class="fas fa-user-circle text-4xl text-blue-500 mb-4"></i>
-                        <h3 class="text-xl font-bold mb-2">Quem sou eu</h3>
-                        <p class="text-slate-400 text-sm">Conheça a mente por trás do Gamerterapia.</p>
+                    <div class="glass-card p-6 rounded-2xl cursor-pointer" onclick="showSection('videos')">
+                        <i class="fas fa-play-circle text-3xl text-red-500 mb-4"></i>
+                        <h3 class="text-lg font-bold mb-2">Gameplays</h3>
+                        <p class="text-slate-400 text-xs">Guias e jornadas épicas.</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl cursor-pointer" onclick="showSection('sobre')">
+                        <i class="fas fa-user-circle text-3xl text-blue-500 mb-4"></i>
+                        <h3 class="text-lg font-bold mb-2">Autor</h3>
+                        <p class="text-slate-400 text-xs">A mente por trás do portal.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SESSÃO: NOTÍCIAS -->
+        <section id="noticias" class="max-w-7xl mx-auto px-4 py-16">
+            <div id="noticias-lista">
+                <h2 class="text-4xl font-gaming font-bold mb-12 text-center uppercase tracking-tighter">Últimas <span class="text-orange-500">Notícias</span></h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <!-- Notícia 1 -->
+                    <article class="glass-card rounded-2xl overflow-hidden cursor-pointer" onclick="openNews('news1')">
+                        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=800" class="w-full h-48 object-cover" alt="GTA VI News">
+                        <div class="p-6">
+                            <span class="text-orange-500 text-xs font-bold uppercase tracking-widest">Rockstar Games</span>
+                            <h3 class="text-xl font-gaming font-bold mt-2 mb-4">GTA VI: Novos rumores indicam avanço na IA e física de água</h3>
+                            <p class="text-slate-400 text-sm">Vazamentos recentes sugerem que a Rockstar está implementando um sistema revolucionário...</p>
+                        </div>
+                    </article>
+
+                    <!-- Notícia 2 -->
+                    <article class="glass-card rounded-2xl overflow-hidden cursor-pointer" onclick="openNews('news2')">
+                        <img src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?auto=format&fit=crop&q=80&w=800" class="w-full h-48 object-cover" alt="Switch 2 News">
+                        <div class="p-6">
+                            <span class="text-red-500 text-xs font-bold uppercase tracking-widest">Nintendo</span>
+                            <h3 class="text-xl font-gaming font-bold mt-2 mb-4">Nintendo Switch 2: Especificações vazadas apontam para DLSS 3.5</h3>
+                            <p class="text-slate-400 text-sm">O novo console híbrido deve contar com o chip T239 da NVIDIA, prometendo performance de PS4 Pro...</p>
+                        </div>
+                    </article>
+
+                    <!-- Notícia 3 -->
+                    <article class="glass-card rounded-2xl overflow-hidden cursor-pointer" onclick="openNews('news3')">
+                        <img src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80&w=800" class="w-full h-48 object-cover" alt="Sony News">
+                        <div class="p-6">
+                            <span class="text-blue-500 text-xs font-bold uppercase tracking-widest">Sony PlayStation</span>
+                            <h3 class="text-xl font-gaming font-bold mt-2 mb-4">PlayStation Studios foca em Single-Player após Concord</h3>
+                            <p class="text-slate-400 text-sm">Mudança de estratégia interna da Sony prioriza novamente narrativas épicas e cinematográficas...</p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+            <!-- Detalhes das Notícias -->
+            <div id="news-container" class="max-w-4xl mx-auto hidden">
+                <button onclick="closeNews()" class="mb-8 text-slate-400 hover:text-white transition flex items-center gap-2">
+                    <i class="fas fa-arrow-left"></i> Voltar para a lista
+                </button>
+
+                <!-- Conteúdo 1: GTA VI -->
+                <div id="news1" class="news-detail space-y-6">
+                    <h2 class="text-4xl font-gaming font-bold leading-tight">GTA VI: O Próximo Salto Tecnológico da Rockstar</h2>
+                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=1200" class="w-full rounded-3xl shadow-2xl" alt="GTA VI Detail">
+                    <div class="text-slate-300 text-lg leading-relaxed space-y-4">
+                        <p>A indústria dos games aguarda ansiosamente por Grand Theft Auto VI, e novos relatórios técnicos de desenvolvedores apontam para avanços sem precedentes no motor gráfico RAGE.</p>
+                        <p>Segundo fontes internas, a Rockstar está focando intensamente na interação com o cenário. A física da água será um diferencial, com simulações de ondas e correntes que afetarão diretamente a navegação. Além disso, a Inteligência Artificial dos NPCs promete comportamentos dinâmicos, onde personagens reagirão ao clima, hora do dia e até ao estilo de direção do jogador de forma única.</p>
+                        <p>O mapa, focado em Leonida (inspirada na Flórida), será o maior e mais denso da franquia, com interiores de edifícios exploráveis em uma escala nunca antes vista.</p>
+                        <p class="pt-6 font-bold">Fonte: <a href="https://www.rockstargames.com" target="_blank" class="text-orange-500 hover:underline">Rockstar Newswire / Bloomberg</a></p>
+                    </div>
+                </div>
+
+                <!-- Conteúdo 2: Switch 2 -->
+                <div id="news2" class="news-detail space-y-6">
+                    <h2 class="text-4xl font-gaming font-bold leading-tight">Nintendo Switch 2: Poder de Nova Geração no Bolso?</h2>
+                    <img src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?auto=format&fit=crop&q=80&w=1200" class="w-full rounded-3xl shadow-2xl" alt="Switch 2 Detail">
+                    <div class="text-slate-300 text-lg leading-relaxed space-y-4">
+                        <p>A sucessão do Nintendo Switch é o segredo mais mal guardado da indústria. Rumores de fornecedores taiwaneses confirmam que o console entrou em fase de produção em massa.</p>
+                        <p>O hardware deve contar com 12GB de RAM LPDDR5X e suporte nativo ao NVIDIA DLSS 3.5 com Ray Reconstruction. Isso permitiria que o console entregasse visuais comparáveis ao PS5 em modo dock, utilizando o upscaling inteligente da NVIDIA.</p>
+                        <p>Uma grande novidade seriam os Joy-Cons magnéticos, resolvendo problemas crônicos de desgaste mecânico, e a retrocompatibilidade completa com a biblioteca atual do Switch original, algo essencial para os fãs.</p>
+                        <p class="pt-6 font-bold">Fonte: <a href="https://www.nintendo.com" target="_blank" class="text-red-500 hover:underline">Eurogamer / Digital Foundry</a></p>
+                    </div>
+                </div>
+
+                <!-- Conteúdo 3: Sony Strategy -->
+                <div id="news3" class="news-detail space-y-6">
+                    <h2 class="text-4xl font-gaming font-bold leading-tight">O Futuro do PlayStation: Retorno às Origens</h2>
+                    <img src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80&w=1200" class="w-full rounded-3xl shadow-2xl" alt="Sony Detail">
+                    <div class="text-slate-300 text-lg leading-relaxed space-y-4">
+                        <p>Após o encerramento prematuro de Concord, a Sony PlayStation parece ter ouvido o feedback da sua comunidade e está recalibrando seus investimentos internos.</p>
+                        <p>Embora a estratégia de "Games as a Service" (GaaS) não tenha sido totalmente descartada, o foco imediato retornou para as franquias Single-Player que definiram o sucesso do PS4 e PS5. Projetos de estúdios como Naughty Dog, Santa Monica e Sucker Punch estão ganhando prioridade orçamentária para os próximos dois anos.</p>
+                        <p>A ideia é manter o hardware PS5 Pro como a "vitrine definitiva" para essas experiências cinematográficas, focando em Ray Tracing a 60 FPS estáveis.</p>
+                        <p class="pt-6 font-bold">Fonte: <a href="https://blog.playstation.com" target="_blank" class="text-blue-500 hover:underline">PlayStation Blog / VGC</a></p>
                     </div>
                 </div>
             </div>
@@ -153,19 +252,19 @@
         <!-- SESSÃO: REVIEWS -->
         <section id="reviews" class="max-w-7xl mx-auto px-4 py-16">
             <h2 class="text-4xl font-gaming font-bold mb-12 text-center uppercase tracking-tighter">Central de <span class="text-purple-500">Reviews</span></h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <article class="glass-card rounded-2xl overflow-hidden lg:col-span-2">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <article class="glass-card rounded-2xl overflow-hidden">
                     <div class="video-container"><iframe src="https://www.youtube.com/embed/R8LCdgIhdFU" allowfullscreen></iframe></div>
                     <div class="p-6">
                         <h3 class="text-2xl font-bold mb-2">Review: Pulse Elite Wireless</h3>
-                        <p class="text-slate-400">Análise técnica focada em áudio de alta fidelidade e performance gamer.</p>
+                        <p class="text-slate-400">Análise técnica focada em áudio de alta fidelidade.</p>
                     </div>
                 </article>
                 <article class="glass-card rounded-2xl overflow-hidden">
                     <div class="video-container"><iframe src="https://www.youtube.com/embed/4A8L1gpbQxo" allowfullscreen></iframe></div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Xbox Series S Unboxing</h3>
-                        <p class="text-slate-400 text-sm">O custo-benefício que balançou a nova geração.</p>
+                        <p class="text-slate-400 text-sm">O custo-benefício da nova geração.</p>
                     </div>
                 </article>
             </div>
@@ -173,36 +272,29 @@
 
         <!-- SESSÃO: VÍDEOS -->
         <section id="videos" class="max-w-7xl mx-auto px-4 py-16">
-            <h2 class="text-4xl font-gaming font-bold mb-12 text-center uppercase tracking-tighter">Galeria de <span class="text-red-500">Vídeos</span></h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <h2 class="text-4xl font-gaming font-bold mb-12 text-center uppercase tracking-tighter text-red-500">Galeria</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <a href="https://www.youtube.com/watch?v=R8LCdgIhdFU" target="_blank" class="glass-card rounded-xl overflow-hidden group block">
-                    <img src="https://img.youtube.com/vi/R8LCdgIhdFU/mqdefault.jpg" class="w-full opacity-80 group-hover:opacity-100 transition" alt="Miniatura Vídeo">
-                    <div class="p-4 text-sm font-bold">Unboxing Pulse Elite</div>
+                    <img src="https://img.youtube.com/vi/R8LCdgIhdFU/mqdefault.jpg" class="w-full opacity-80 group-hover:opacity-100 transition" alt="Video">
+                    <div class="p-4 text-sm font-bold">Pulse Elite</div>
                 </a>
                 <a href="https://www.youtube.com/watch?v=4A8L1gpbQxo" target="_blank" class="glass-card rounded-xl overflow-hidden group block">
-                    <img src="https://img.youtube.com/vi/4A8L1gpbQxo/mqdefault.jpg" class="w-full opacity-80 group-hover:opacity-100 transition" alt="Miniatura Vídeo">
-                    <div class="p-4 text-sm font-bold">Unboxing Xbox Series S</div>
+                    <img src="https://img.youtube.com/vi/4A8L1gpbQxo/mqdefault.jpg" class="w-full opacity-80 group-hover:opacity-100 transition" alt="Video">
+                    <div class="p-4 text-sm font-bold">Xbox Series S</div>
                 </a>
                 <a href="https://www.youtube.com/watch?v=WHT6jO89qN0" target="_blank" class="glass-card rounded-xl overflow-hidden group block">
-                    <img src="https://img.youtube.com/vi/WHT6jO89qN0/mqdefault.jpg" class="w-full opacity-80 group-hover:opacity-100 transition" alt="Miniatura Vídeo">
-                    <div class="p-4 text-sm font-bold">Hogwarts Legacy: Vassoura</div>
+                    <img src="https://img.youtube.com/vi/WHT6jO89qN0/mqdefault.jpg" class="w-full opacity-80 group-hover:opacity-100 transition" alt="Video">
+                    <div class="p-4 text-sm font-bold">Hogwarts Legacy</div>
                 </a>
             </div>
         </section>
 
         <!-- SESSÃO: SETUP -->
-        <section id="setup" class="max-w-7xl mx-auto px-4 py-16">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-gaming font-bold mb-4 uppercase tracking-tighter italic">
-                    Referência: <span class="text-orange-500">O PC dos Sonhos</span>
-                </h2>
-                <p class="text-slate-400 max-w-3xl mx-auto text-lg">
-                    Explorando o máximo da tecnologia inspirados no conteúdo de referência do hardware entusiasta.
-                </p>
-            </div>
+        <section id="setup" class="max-w-7xl mx-auto px-4 py-16 text-center">
+            <h2 class="text-4xl font-gaming font-bold mb-8 uppercase tracking-tighter italic">Inspiração: <span class="text-orange-500 text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-600">PC dos Sonhos</span></h2>
             <div class="max-w-4xl mx-auto glass-card p-2 rounded-2xl shadow-2xl">
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/Lnd0hY7yG8I" title="Inspiração Setup" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/Lnd0hY7yG8I" title="Setup" allowfullscreen></iframe>
                 </div>
             </div>
         </section>
@@ -211,70 +303,28 @@
         <section id="sobre" class="max-w-7xl mx-auto px-4 py-16">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <div class="space-y-8">
-                    <h2 class="text-5xl font-gaming font-bold uppercase tracking-widest neon-text">Sobre Mim</h2>
-                    <p class="text-xl text-slate-300 leading-relaxed font-light">
-                        Olá! Eu sou o idealizador do <span class="text-purple-400 font-bold">Gamerterapia</span>. Minha vida é um equilíbrio constante entre a precisão da tecnologia empresarial e a fantasia dos mundos geeks.
-                    </p>
-                    
+                    <h2 class="text-5xl font-gaming font-bold uppercase neon-text">Sobre o Autor</h2>
                     <div class="space-y-6">
                         <div class="glass-card p-6 rounded-2xl border-l-4 border-blue-500">
-                            <h3 class="text-2xl font-gaming font-bold text-blue-500 mb-2">Perfil Profissional</h3>
-                            <p class="text-slate-300">
-                                Atuo como <span class="text-white font-bold">Arquiteto de Soluções</span> focado em infraestrutura, representando a excelência tecnológica da <span class="text-white">Dell</span>. No meu dia a dia profissional, costumo dizer que entregamos soluções completas: <span class="italic">"Do parafuso ao foguete"</span>.
-                            </p>
+                            <h3 class="text-2xl font-gaming font-bold text-blue-500 mb-2">Arquitetura Tech</h3>
+                            <p class="text-slate-300">Profissional de infraestrutura especializado em soluções de ponta. "Do parafuso ao foguete", cada componente no Gamerterapia é escolhido pela sua eficiência técnica.</p>
                         </div>
-                        
                         <div class="glass-card p-6 rounded-2xl border-l-4 border-purple-500">
                             <h3 class="text-2xl font-gaming font-bold text-purple-500 mb-2">Essência Geek</h3>
-                            <p class="text-slate-300">
-                                Apaixonado por animes e videogames desde sempre. Se você me perguntar sobre heróis, meu personagem favorito é o <span class="text-white font-bold text-purple-400">Vegeta</span> (Dragon Ball), pelo seu esforço e evolução constante. Também sou fã de <span class="italic">Demon Slayer</span> e levo comigo a determinação dos Hashiras.
-                            </p>
+                            <p class="text-slate-300">Fã incondicional de Dragon Ball (especialmente do Vegeta) e admirador da disciplina dos Hashiras. O Gamerterapia é a união da técnica com a paixão.</p>
                         </div>
                     </div>
                 </div>
-
-                <div class="relative">
-                    <div class="glass-card p-8 rounded-3xl border border-white/10 space-y-8">
-                        <div class="flex items-center gap-6">
-                            <!-- Foto Atualizada Aqui -->
-                            <div class="w-24 h-24 rounded-full overflow-hidden profile-border">
-                                <img src="https://share.google/images/NMzblQOt1njYPU5a0" 
-                                     class="w-full h-full object-cover" 
-                                     alt="Minha Foto"
-                                     onerror="this.src='https://ui-avatars.com/api/?name=Gamer+Terapia&background=8b5cf6&color=fff'">
-                            </div>
-                            <div>
-                                <h4 class="text-2xl font-gaming font-bold uppercase">Personal Bio</h4>
-                                <p class="text-slate-400">Signo: Áries | Gamer & Tech Enthusiast</p>
-                            </div>
-                        </div>
-
-                        <div class="space-y-4">
-                            <h5 class="text-lg font-gaming font-bold text-purple-400 uppercase tracking-widest">Hobbies & Estilo de Vida</h5>
-                            <ul class="grid grid-cols-2 gap-4 text-sm">
-                                <li class="bg-slate-800/50 p-3 rounded-xl border border-white/5 flex items-center gap-2">
-                                    <i class="fas fa-dumbbell text-purple-500"></i> Fitness (Desde 2024)
-                                </li>
-                                <li class="bg-slate-800/50 p-3 rounded-xl border border-white/5 flex items-center gap-2">
-                                    <i class="fas fa-plane text-purple-500"></i> Viajar
-                                </li>
-                                <li class="bg-slate-800/50 p-3 rounded-xl border border-white/5 flex items-center gap-2">
-                                    <i class="fas fa-gamepad text-purple-500"></i> Colecionáveis
-                                </li>
-                                <li class="bg-slate-800/50 p-3 rounded-xl border border-white/5 flex items-center gap-2">
-                                    <i class="fas fa-tv text-purple-500"></i> Maratonar Animes
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="pt-6 border-t border-white/10 text-center">
-                            <p class="text-slate-500 italic text-sm mb-4 italic">"Incendeie seu coração."</p>
-                            <div class="flex justify-center gap-4 text-2xl text-slate-400">
-                                <i class="fab fa-play-station hover:text-blue-500 cursor-pointer"></i>
-                                <i class="fab fa-xbox hover:text-green-500 cursor-pointer"></i>
-                                <i class="fab fa-steam hover:text-white cursor-pointer"></i>
-                            </div>
-                        </div>
+                <div class="glass-card p-8 rounded-3xl border border-white/10 text-center">
+                    <div class="w-32 h-32 rounded-full overflow-hidden mx-auto mb-6 profile-border">
+                        <img src="https://share.google/images/NMzblQOt1njYPU5a0" class="w-full h-full object-cover" alt="Perfil">
+                    </div>
+                    <h4 class="text-2xl font-gaming font-bold uppercase mb-2">Gamer & Arquiteto</h4>
+                    <p class="text-slate-400 italic">"Incendeie seu coração."</p>
+                    <div class="mt-8 flex justify-center gap-6 text-2xl text-slate-500">
+                        <i class="fab fa-play-station hover:text-blue-500"></i>
+                        <i class="fab fa-xbox hover:text-green-500"></i>
+                        <i class="fab fa-steam hover:text-white"></i>
                     </div>
                 </div>
             </div>
@@ -289,34 +339,61 @@
                 <i class="fas fa-gamepad text-2xl text-purple-500"></i>
                 <span class="font-gaming text-xl font-bold tracking-tighter neon-text uppercase">Gamerterapia</span>
             </div>
-            <p class="text-slate-600 text-xs mb-8 uppercase tracking-widest italic">"Do parafuso ao foguete - Criado por um Arquiteto, mantido por um Gamer."</p>
-            <div class="flex justify-center space-x-8 text-slate-400">
-                <a href="https://www.youtube.com/@GAMERTERAPIA" target="_blank" class="hover:text-red-500 transition"><i class="fab fa-youtube text-xl"></i></a>
-                <a href="https://www.facebook.com/gamerterapia" target="_blank" class="hover:text-blue-500 transition"><i class="fab fa-facebook text-xl"></i></a>
-            </div>
+            <p class="text-slate-600 text-xs mb-8 uppercase tracking-widest italic">A gente joga, a gente analisa, a gente compartilha.</p>
         </div>
     </footer>
 
-    <!-- Script de Controle da SPA -->
+    <!-- Script de Controle -->
     <script>
         function showSection(sectionId) {
+            // Esconde todas as seções principais
             const sections = document.querySelectorAll('section');
             sections.forEach(s => s.classList.remove('active'));
 
+            // Remove destaque dos botões
             const buttons = document.querySelectorAll('.nav-btn');
             buttons.forEach(b => b.classList.remove('text-purple-400', 'border-b-2', 'border-purple-500'));
 
+            // Mostra a seção selecionada
             const element = document.getElementById(sectionId);
             if (element) {
                 element.classList.add('active');
             }
 
+            // Ativa o botão no menu
             const activeBtn = document.getElementById('btn-' + sectionId);
             if(activeBtn) {
                 activeBtn.classList.add('text-purple-400', 'border-b-2', 'border-purple-500');
             }
 
+            // Se for notícias, sempre resetar para a lista
+            if (sectionId === 'noticias') {
+                closeNews();
+            }
+
             window.scrollTo(0, 0);
+        }
+
+        function openNews(newsId) {
+            // Esconde a lista
+            document.getElementById('noticias-lista').classList.add('hidden');
+            // Mostra o container de detalhes
+            document.getElementById('news-container').classList.remove('hidden');
+            
+            // Esconde todos os detalhes de notícias
+            const details = document.querySelectorAll('.news-detail');
+            details.forEach(d => d.classList.remove('active'));
+
+            // Mostra a notícia específica
+            document.getElementById(newsId).classList.add('active');
+            window.scrollTo(0, 0);
+        }
+
+        function closeNews() {
+            // Mostra a lista
+            document.getElementById('noticias-lista').classList.remove('hidden');
+            // Esconde o container de detalhes
+            document.getElementById('news-container').classList.add('hidden');
         }
 
         window.onload = () => {
