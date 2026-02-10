@@ -135,26 +135,12 @@
 </head>
 <body class="min-h-screen flex flex-col">
 
-    <!-- Definição da Logo SVG (Versão Preta com Contorno) -->
+    <!-- Definição da Logo SVG -->
     <svg style="display: none;">
         <symbol id="icon-gamerterapia" viewBox="0 0 100 100">
-            <!-- Silhueta da Cabeça em Preto com contorno branco para visibilidade -->
-            <path d="M50,5 C25,5 10,25 10,48 C10,65 20,80 32,88 L32,95 L68,95 L68,88 C80,80 90,65 90,48 C90,25 75,5 50,5 Z" 
-                  fill="black" 
-                  stroke="white" 
-                  stroke-width="2.5"/>
-            <!-- Comando no Centro (Branco para contraste, ícones em preto) -->
-            <path d="M35,45 Q35,38 50,38 Q65,38 65,45 L67,58 Q67,65 58,65 L54,62 L46,62 L42,65 Q33,65 33,58 Z" 
-                  fill="white"/>
-            <!-- Detalhes do Comando em Preto -->
-            <circle cx="40" cy="50" r="1.5" fill="black" />
-            <circle cx="40" cy="54" r="1.5" fill="black" />
-            <circle cx="37" cy="52" r="1.5" fill="black" />
-            <circle cx="43" cy="52" r="1.5" fill="black" />
-            <circle cx="58" cy="48" r="1.2" fill="black" />
-            <circle cx="58" cy="54" r="1.2" fill="black" />
-            <circle cx="61" cy="51" r="1.2" fill="black" />
-            <circle cx="55" cy="51" r="1.2" fill="black" />
+            <path d="M50,5 C25,5 10,25 10,48 C10,65 20,80 32,88 L32,95 L68,95 L68,88 C80,80 90,65 90,48 C90,25 75,5 50,5 Z" fill="black" stroke="white" stroke-width="2.5"/>
+            <path d="M35,45 Q35,38 50,38 Q65,38 65,45 L67,58 Q67,65 58,65 L54,62 L46,62 L42,65 Q33,65 33,58 Z" fill="white"/>
+            <circle cx="40" cy="50" r="1.5" fill="black" /><circle cx="40" cy="54" r="1.5" fill="black" /><circle cx="37" cy="52" r="1.5" fill="black" /><circle cx="43" cy="52" r="1.5" fill="black" /><circle cx="58" cy="48" r="1.2" fill="black" /><circle cx="58" cy="54" r="1.2" fill="black" /><circle cx="61" cy="51" r="1.2" fill="black" /><circle cx="55" cy="51" r="1.2" fill="black" />
         </symbol>
     </svg>
 
@@ -163,10 +149,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-24">
                 <div class="flex items-center gap-4 cursor-pointer" onclick="showSection('inicio')">
-                    <!-- Logo SVG Atualizado -->
-                    <svg class="h-14 w-14 logo-glow">
-                        <use xlink:href="#icon-gamerterapia"></use>
-                    </svg>
+                    <svg class="h-14 w-14 logo-glow"><use xlink:href="#icon-gamerterapia"></use></svg>
                     <span class="font-gaming text-2xl font-bold tracking-tighter neon-text uppercase hidden sm:block">Gamerterapia</span>
                 </div>
                 <div class="hidden md:flex space-x-8 uppercase font-bold tracking-widest text-sm">
@@ -190,10 +173,7 @@
         <section id="inicio" class="active">
             <header class="relative py-20 bg-gradient-to-br from-purple-900/20 to-pink-900/20 text-center border-b border-white/5">
                 <div class="max-w-7xl mx-auto px-4">
-                    <!-- Logo em destaque no Hero -->
-                    <svg class="h-40 w-40 mx-auto mb-8 logo-glow">
-                        <use xlink:href="#icon-gamerterapia"></use>
-                    </svg>
+                    <svg class="h-40 w-40 mx-auto mb-8 logo-glow"><use xlink:href="#icon-gamerterapia"></use></svg>
                     <h1 class="text-6xl md:text-8xl font-gaming font-bold mb-6 neon-text uppercase">Gamerterapia</h1>
                     <p class="text-xl text-slate-400 max-w-2xl mx-auto mb-12 font-light italic text-transparent bg-clip-text bg-gradient-to-r from-white to-purple-400">
                         Onde a tecnologia encontra a paixão pelos videojogos.
@@ -212,40 +192,32 @@
                     <div class="glass-card p-6 rounded-2xl cursor-pointer" onclick="showSection('noticias')">
                         <i class="fas fa-bolt text-3xl text-orange-500 mb-4"></i>
                         <h3 class="text-lg font-bold mb-2 uppercase">Notícias</h3>
-                        <p class="text-slate-400 text-xs">O pulsar da indústria em tempo real.</p>
                     </div>
                     <div class="glass-card p-6 rounded-2xl cursor-pointer" onclick="showSection('reviews')">
                         <i class="fas fa-microchip text-3xl text-purple-500 mb-4"></i>
                         <h3 class="text-lg font-bold mb-2 uppercase">Reviews</h3>
-                        <p class="text-slate-400 text-xs">Testes rigorosos e vereditos sinceros.</p>
                     </div>
                     <div class="glass-card p-6 rounded-2xl cursor-pointer" onclick="showSection('videos')">
                         <i class="fas fa-play text-3xl text-red-500 mb-4"></i>
                         <h3 class="text-lg font-bold mb-2 uppercase">Vídeos</h3>
-                        <p class="text-slate-400 text-xs">Produções exclusivas Gamerterapia.</p>
                     </div>
                     <div class="glass-card p-6 rounded-2xl cursor-pointer" onclick="showSection('sobre')">
                         <i class="fas fa-user-circle text-3xl text-blue-500 mb-4"></i>
                         <h3 class="text-lg font-bold mb-2 uppercase">Sobre</h3>
-                        <p class="text-slate-400 text-xs">Conheça a nossa jornada e valores.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SESSÃO: NOTÍCIAS -->
+        <!-- SESSÃO: NOTÍCIAS (LISTA COMPLETA 1-34) -->
         <section id="noticias" class="max-w-7xl mx-auto px-4 py-16">
             <div id="noticias-lista">
-                <h2 class="text-4xl font-gaming font-bold mb-12 text-center uppercase tracking-tighter">Central de <span class="text-orange-500">Notícias</span></h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="news-grid">
-                </div>
+                <h2 class="text-4xl font-gaming font-bold mb-12 text-center uppercase tracking-tighter">Portal de <span class="text-orange-500">Notícias</span></h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="news-grid"></div>
             </div>
             <div id="news-container" class="max-w-4xl mx-auto hidden">
-                <button onclick="closeNews()" class="mb-8 text-slate-400 hover:text-white transition flex items-center gap-2">
-                    <i class="fas fa-arrow-left"></i> Voltar à Central
-                </button>
-                <div id="news-details-wrapper">
-                </div>
+                <button onclick="closeNews()" class="mb-8 text-slate-400 hover:text-white transition flex items-center gap-2"><i class="fas fa-arrow-left"></i> Voltar</button>
+                <div id="news-details-wrapper"></div>
             </div>
         </section>
 
@@ -255,41 +227,149 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <article class="glass-card rounded-2xl overflow-hidden">
                     <div class="video-container"><iframe src="https://www.youtube.com/embed/R8LCdgIhdFU" allowfullscreen></iframe></div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-2 uppercase font-gaming">Pulse Elite Wireless</h3>
-                        <p class="text-slate-400">Análise técnica focada em áudio planar magnético para o PS5.</p>
-                    </div>
+                    <div class="p-6"><h3 class="text-2xl font-bold mb-2 uppercase font-gaming">Pulse Elite Wireless</h3><p class="text-slate-400 text-sm">Análise técnica focada em áudio planar magnético para o PS5.</p></div>
                 </article>
                 <article class="glass-card rounded-2xl overflow-hidden">
                     <div class="video-container"><iframe src="https://www.youtube.com/embed/4A8L1gpbQxo" allowfullscreen></iframe></div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2 uppercase font-gaming">Xbox Series S Unboxing</h3>
-                        <p class="text-slate-400 text-sm">Avaliamos o pequeno notável da Microsoft em 2026.</p>
-                    </div>
+                    <div class="p-6"><h3 class="text-xl font-bold mb-2 uppercase font-gaming">Xbox Series S em 2026</h3><p class="text-slate-400 text-sm">O gigante compacto da Microsoft ainda domina o custo-benefício.</p></div>
                 </article>
             </div>
         </section>
 
-        <!-- SESSÃO: VÍDEOS -->
+        <!-- SESSÃO: VÍDEOS (EXPANDIDA COM 14 VÍDEOS + RESUMOS) -->
         <section id="videos" class="max-w-7xl mx-auto px-4 py-16">
-            <h2 class="text-4xl font-gaming font-bold mb-12 text-center uppercase tracking-tighter text-red-500">Galeria Gamerterapia</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <a href="https://www.youtube.com/watch?v=R8LCdgIhdFU" target="_blank" class="glass-card rounded-xl overflow-hidden group block">
-                    <img src="https://img.youtube.com/vi/R8LCdgIhdFU/mqdefault.jpg" class="w-full opacity-80 group-hover:opacity-100 transition" alt="Video">
-                    <div class="p-4"><div class="text-sm font-bold">Pulse Elite: Unboxing</div></div>
-                </a>
-                <a href="https://www.youtube.com/watch?v=4A8L1gpbQxo" target="_blank" class="glass-card rounded-xl overflow-hidden group block">
-                    <img src="https://img.youtube.com/vi/4A8L1gpbQxo/mqdefault.jpg" class="w-full opacity-80 group-hover:opacity-100 transition" alt="Video">
-                    <div class="p-4"><div class="text-sm font-bold">Xbox Series S Unboxing</div></div>
-                </a>
-                <a href="https://www.youtube.com/watch?v=WHT6jO89qN0" target="_blank" class="glass-card rounded-xl overflow-hidden group block">
-                    <img src="https://img.youtube.com/vi/WHT6jO89qN0/mqdefault.jpg" class="w-full opacity-80 group-hover:opacity-100 transition" alt="Video">
-                    <div class="p-4"><div class="text-sm font-bold">Hogwarts Legacy Guide</div></div>
-                </a>
-                <a href="https://www.youtube.com/watch?v=dHQGiFsADqQ" target="_blank" class="glass-card rounded-xl overflow-hidden group block">
-                    <img src="https://img.youtube.com/vi/dHQGiFsADqQ/mqdefault.jpg" class="w-full opacity-80 group-hover:opacity-100 transition" alt="Video">
-                    <div class="p-4"><div class="text-sm font-bold">Gamerterapia na BGS</div></div>
-                </a>
+            <h2 class="text-4xl font-gaming font-bold mb-12 text-center uppercase tracking-tighter text-red-500 italic">Playlists da <span class="text-white">Terapia</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- 1. Pulse Elite -->
+                <div class="glass-card rounded-xl overflow-hidden group border-b-2 border-purple-500">
+                    <div class="relative aspect-video">
+                        <img src="https://img.youtube.com/vi/R8LCdgIhdFU/mqdefault.jpg" class="w-full object-cover" alt="Pulse Elite">
+                        <a href="https://www.youtube.com/watch?v=R8LCdgIhdFU" target="_blank" class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"><i class="fas fa-play-circle text-4xl text-white"></i></a>
+                    </div>
+                    <div class="p-4"><h3 class="text-sm font-bold mb-2">Pulse Elite: Unboxing</h3><p class="text-xs text-slate-400 leading-tight">Análise técnica profunda sobre a nova tecnologia planar magnética no PS5.</p></div>
+                </div>
+
+                <!-- 2. Xbox Series S -->
+                <div class="glass-card rounded-xl overflow-hidden group border-b-2 border-green-500">
+                    <div class="relative aspect-video">
+                        <img src="https://img.youtube.com/vi/4A8L1gpbQxo/mqdefault.jpg" class="w-full" alt="Xbox Series S">
+                        <a href="https://www.youtube.com/watch?v=4A8L1gpbQxo" target="_blank" class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"><i class="fas fa-play-circle text-4xl text-white"></i></a>
+                    </div>
+                    <div class="p-4"><h3 class="text-sm font-bold mb-2">Xbox Series S: Unboxing</h3><p class="text-xs text-slate-400 leading-tight">Testando o carregamento ultra rápido e o custo-benefício imbatível para o Game Pass.</p></div>
+                </div>
+
+                <!-- 3. Hogwarts Legacy -->
+                <div class="glass-card rounded-xl overflow-hidden group border-b-2 border-yellow-500">
+                    <div class="relative aspect-video">
+                        <img src="https://img.youtube.com/vi/WHT6jO89qN0/mqdefault.jpg" class="w-full" alt="Hogwarts">
+                        <a href="https://www.youtube.com/watch?v=WHT6jO89qN0" target="_blank" class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"><i class="fas fa-play-circle text-4xl text-white"></i></a>
+                    </div>
+                    <div class="p-4"><h3 class="text-sm font-bold mb-2">Hogwarts: Guia de Voo</h3><p class="text-xs text-slate-400 leading-tight">Tudo o que precisas saber para destravar as vassouras e explorar o mundo bruxo.</p></div>
+                </div>
+
+                <!-- 4. Demon Slayer -->
+                <div class="glass-card rounded-xl overflow-hidden group border-b-2 border-red-600">
+                    <div class="relative aspect-video">
+                        <img src="https://img.youtube.com/vi/D5R-8X8P3jE/mqdefault.jpg" class="w-full" alt="Demon Slayer">
+                        <a href="https://www.youtube.com/watch?v=D5R-8X8P3jE" target="_blank" class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"><i class="fas fa-play-circle text-4xl text-white"></i></a>
+                    </div>
+                    <div class="p-4"><h3 class="text-sm font-bold mb-2">Hinokami Chronicles Gameplay</h3><p class="text-xs text-slate-400 leading-tight">Revive os momentos épicos dos Hashiras com uma fidelidade visual impressionante.</p></div>
+                </div>
+
+                <!-- 5. Dragon Ball Kakarot -->
+                <div class="glass-card rounded-xl overflow-hidden group border-b-2 border-orange-500">
+                    <div class="relative aspect-video">
+                        <img src="https://img.youtube.com/vi/90Gv0h0bMTo/mqdefault.jpg" class="w-full" alt="DBZ">
+                        <a href="https://www.youtube.com/watch?v=90Gv0h0bMTo" target="_blank" class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"><i class="fas fa-play-circle text-4xl text-white"></i></a>
+                    </div>
+                    <div class="p-4"><h3 class="text-sm font-bold mb-2">DBZ: O Orgulho de Vegeta</h3><p class="text-xs text-slate-400 leading-tight">Explorando o arco de desenvolvimento do Príncipe dos Saiyajins neste RPG de mundo aberto.</p></div>
+                </div>
+
+                <!-- 6. Elden Ring -->
+                <div class="glass-card rounded-xl overflow-hidden group border-b-2 border-amber-900">
+                    <div class="relative aspect-video">
+                        <img src="https://img.youtube.com/vi/L59B-v1qD88/mqdefault.jpg" class="w-full" alt="Elden Ring">
+                        <a href="https://www.youtube.com/watch?v=L59B-v1qD88" target="_blank" class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"><i class="fas fa-play-circle text-4xl text-white"></i></a>
+                    </div>
+                    <div class="p-4"><h3 class="text-sm font-bold mb-2">Elden Ring Expansion Tech</h3><p class="text-xs text-slate-400 leading-tight">Primeiras impressões técnicas da expansão Shadow of the Erdtree e novos biomas.</p></div>
+                </div>
+
+                <!-- 7. PS5 Tips -->
+                <div class="glass-card rounded-xl overflow-hidden group border-b-2 border-blue-400">
+                    <div class="relative aspect-video">
+                        <img src="https://img.youtube.com/vi/rbwKpl114Jo/mqdefault.jpg" class="w-full" alt="PS5 Tips">
+                        <a href="https://www.youtube.com/watch?v=rbwKpl114Jo" target="_blank" class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"><i class="fas fa-play-circle text-4xl text-white"></i></a>
+                    </div>
+                    <div class="p-4"><h3 class="text-sm font-bold mb-2">PS5: Dicas Fundamentais</h3><p class="text-xs text-slate-400 leading-tight">Configurações essenciais para quem acabou de comprar a consola e quer o melhor visual.</p></div>
+                </div>
+
+                <!-- 8. Arcade Project -->
+                <div class="glass-card rounded-xl overflow-hidden group border-b-2 border-red-500">
+                    <div class="relative aspect-video">
+                        <img src="https://img.youtube.com/vi/s2dAIwKujFA/mqdefault.jpg" class="w-full" alt="Arcade">
+                        <a href="https://www.youtube.com/watch?v=s2dAIwKujFA" target="_blank" class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"><i class="fas fa-play-circle text-4xl text-white"></i></a>
+                    </div>
+                    <div class="p-4"><h3 class="text-sm font-bold mb-2">Arcade DIY: Projeto Concluído</h3><p class="text-xs text-slate-400 leading-tight">A montagem completa de um arcade caseiro focado em emulação de alta performance.</p></div>
+                </div>
+
+                <!-- 9. BGS Vlog -->
+                <div class="glass-card rounded-xl overflow-hidden group border-b-2 border-purple-400">
+                    <div class="relative aspect-video">
+                        <img src="https://img.youtube.com/vi/dHQGiFsADqQ/mqdefault.jpg" class="w-full" alt="BGS">
+                        <a href="https://www.youtube.com/watch?v=dHQGiFsADqQ" target="_blank" class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"><i class="fas fa-play-circle text-4xl text-white"></i></a>
+                    </div>
+                    <div class="p-4"><h3 class="text-sm font-bold mb-2">BGS: Giro de Novidades</h3><p class="text-xs text-slate-400 leading-tight">Um resumo visual dos estandes mais tecnológicos da feira e o que vem por aí.</p></div>
+                </div>
+
+                <!-- 10. Samsung Odyssey -->
+                <div class="glass-card rounded-xl overflow-hidden group border-b-2 border-cyan-500">
+                    <div class="relative aspect-video">
+                        <img src="https://img.youtube.com/vi/r770poPzEig/mqdefault.jpg" class="w-full" alt="Monitor">
+                        <a href="https://www.youtube.com/watch?v=r770poPzEig" target="_blank" class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"><i class="fas fa-play-circle text-4xl text-white"></i></a>
+                    </div>
+                    <div class="p-4"><h3 class="text-sm font-bold mb-2">Monitores Samsung OLED</h3><p class="text-xs text-slate-400 leading-tight">Análise da imersão e fidelidade de cor dos novos monitores gaming da linha Odyssey.</p></div>
+                </div>
+
+                <!-- 11. Street Fighter 6 -->
+                <div class="glass-card rounded-xl overflow-hidden group border-b-2 border-orange-600">
+                    <div class="relative aspect-video">
+                        <img src="https://img.youtube.com/vi/f0-9S2v7vS8/mqdefault.jpg" class="w-full" alt="SF6">
+                        <a href="https://www.youtube.com/watch?v=f0-9S2v7vS8" target="_blank" class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"><i class="fas fa-play-circle text-4xl text-white"></i></a>
+                    </div>
+                    <div class="p-4"><h3 class="text-sm font-bold mb-2">SF6: Mecânicas de Luta</h3><p class="text-xs text-slate-400 leading-tight">Dominando o sistema de Drive Impact e as novas dinâmicas competitivas de SF6.</p></div>
+                </div>
+
+                <!-- 12. Spider-Man 2 -->
+                <div class="glass-card rounded-xl overflow-hidden group border-b-2 border-red-500">
+                    <div class="relative aspect-video">
+                        <img src="https://img.youtube.com/vi/X_zQo-H9U4Y/mqdefault.jpg" class="w-full" alt="SpiderMan">
+                        <a href="https://www.youtube.com/watch?v=X_zQo-H9U4Y" target="_blank" class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"><i class="fas fa-play-circle text-4xl text-white"></i></a>
+                    </div>
+                    <div class="p-4"><h3 class="text-sm font-bold mb-2">Spider-Man 2: PS5 Tech</h3><p class="text-xs text-slate-400 leading-tight">Análise técnica do Ray Tracing e do carregamento via SSD na sequela da Insomniac.</p></div>
+                </div>
+
+                <!-- 13. Tekken 8 -->
+                <div class="glass-card rounded-xl overflow-hidden group border-b-2 border-slate-500">
+                    <div class="relative aspect-video">
+                        <img src="https://img.youtube.com/vi/975hM8G_H-Y/mqdefault.jpg" class="w-full" alt="Tekken 8">
+                        <a href="https://www.youtube.com/watch?v=975hM8G_H-Y" target="_blank" class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"><i class="fas fa-play-circle text-4xl text-white"></i></a>
+                    </div>
+                    <div class="p-4"><h3 class="text-sm font-bold mb-2">Tekken 8: Unreal Engine 5</h3><p class="text-xs text-slate-400 leading-tight">Como o novo motor gráfico impactou os modelos de personagem e a física de dano.</p></div>
+                </div>
+
+                <!-- 14. FFVII Rebirth -->
+                <div class="glass-card rounded-xl overflow-hidden group border-b-2 border-blue-900">
+                    <div class="relative aspect-video">
+                        <img src="https://img.youtube.com/vi/bE_Xo4XzF3g/mqdefault.jpg" class="w-full" alt="FFVII">
+                        <a href="https://www.youtube.com/watch?v=bE_Xo4XzF3g" target="_blank" class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition"><i class="fas fa-play-circle text-4xl text-white"></i></a>
+                    </div>
+                    <div class="p-4"><h3 class="text-sm font-bold mb-2">FFVII Rebirth: Fidelidade</h3><p class="text-xs text-slate-400 leading-tight">Explorando o mundo aberto colossal além de Midgar com foco em performance e detalhe.</p></div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <a href="https://www.youtube.com/@GAMERTERAPIA" target="_blank" class="bg-red-600 hover:bg-red-700 px-10 py-4 rounded-xl font-bold transition inline-block">ACESSAR CANAL COMPLETO</a>
             </div>
         </section>
 
@@ -297,24 +377,23 @@
         <section id="sobre" class="max-w-7xl mx-auto px-4 py-16">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <div class="space-y-8">
-                    <h2 class="text-5xl font-gaming font-bold uppercase neon-text">Sobre o Canal</h2>
+                    <h2 class="text-5xl font-gaming font-bold uppercase neon-text">Gamerterapia</h2>
                     <div class="space-y-6">
                         <div class="glass-card p-6 rounded-2xl border-l-4 border-blue-500">
-                            <h3 class="text-2xl font-gaming font-bold text-blue-500 mb-2">Arquitetura de Conteúdo</h3>
-                            <p class="text-slate-300">Analisamos cada detalhe que faz a experiência gamer ser única, unindo infraestrutura tecnológica com paixão visceral.</p>
+                            <h3 class="text-2xl font-gaming font-bold text-blue-500 mb-2">Infraestrutura & Tecnologia</h3>
+                            <p class="text-slate-300">Unindo a precisão da arquitetura de soluções corporativas com a paixão visceral pelo hardware gamer. Analisamos do "parafuso ao foguete".</p>
                         </div>
                         <div class="glass-card p-6 rounded-2xl border-l-4 border-purple-500">
-                            <h3 class="text-2xl font-gaming font-bold text-purple-500 mb-2">Equipa</h3>
-                            <p class="text-slate-300">Gamerterapia é um espaço de partilha e análise técnica criado por entusiastas para entusiastas.</p>
+                            <h3 class="text-2xl font-gaming font-bold text-purple-500 mb-2">Mundo Geek</h3>
+                            <p class="text-slate-300">Fã fervoroso de Vegeta e da filosofia dos Hashiras. O Gamerterapia é um portal criado para elevar a conversa técnica sobre jogos.</p>
                         </div>
                     </div>
                 </div>
                 <div class="glass-card p-8 rounded-3xl border border-white/10 text-center">
                     <div class="w-40 h-40 mx-auto mb-6 logo-glow">
-                        <!-- Logo no Sobre -->
                         <svg class="w-full h-full"><use xlink:href="#icon-gamerterapia"></use></svg>
                     </div>
-                    <h4 class="text-2xl font-gaming font-bold uppercase mb-2">Comunidade Gamerterapia</h4>
+                    <h4 class="text-2xl font-gaming font-bold uppercase mb-2">Central Gamerterapia</h4>
                     <p class="text-slate-400 italic">"Análise de Elite & Cultura Geek"</p>
                 </div>
             </div>
@@ -324,10 +403,7 @@
     <footer class="bg-slate-950 py-12 border-t border-white/5 mt-20 text-center">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex flex-col items-center gap-4 mb-6">
-                <!-- Logo no Rodapé -->
-                <svg class="h-16 w-16 logo-glow">
-                    <use xlink:href="#icon-gamerterapia"></use>
-                </svg>
+                <svg class="h-16 w-16 logo-glow"><use xlink:href="#icon-gamerterapia"></use></svg>
                 <span class="font-gaming text-xl font-bold tracking-tighter neon-text uppercase">Gamerterapia</span>
             </div>
             <p class="text-slate-600 text-xs uppercase tracking-widest italic">Análises • Hardware • Cultura Geek • 2026</p>
@@ -336,51 +412,9 @@
 
     <script>
         const newsData = [
-            { id: "news1", title: "GTA VI: IA de NPCs e Física Dinâmica", tag: "Rockstar Games", content: "O desenvolvimento de Grand Theft Auto VI está a elevar o patamar da simulação urbana. Novas patentes sugerem que a Rockstar está a implementar um sistema de animação procedural baseado em física. A IA dos NPCs permitirá rotinas complexas e reatividade climática inédita.", source: "Rockstar Newswire / Bloomberg" },
-            { id: "news2", title: "Switch 2: A Arquitectura NVIDIA T239", tag: "Nintendo", content: "O sucessor do Switch trará o chip T239 com arquitetura Ampere. O grande diferencial será o suporte ao DLSS 3.5 e Ray Reconstruction, garantindo fidelidade visual e eficiência energética superiores.", source: "Nikkei Asia / Digital Foundry" },
-            { id: "news3", title: "PlayStation: Foco Total no Single-Player", tag: "Sony Strategy", content: "Sony redireciona investimentos massivos para títulos narrativos de alto impacto como Ghost of Yotei e novos projetos da Santa Monica Studio para o PS5 Pro.", source: "Sony Financial Report" },
-            { id: "news4", title: "Metroid Prime 4: Inovações Visuais", tag: "Retro Studios", content: "O motor gráfico proprietário da Retro Studios foca em iluminação volumétrica e física de partículas avançada para criar ambientes alienígenas imersivos.", source: "VGC / Nintendo Direct" },
-            { id: "news5", title: "RTX 5090 Blackwell: A Revolução das Memórias GDDR7", tag: "NVIDIA Tech", content: `
-                <p class="mb-4">A chegada da próxima geração de GPUs da NVIDIA, a aguardada série GeForce RTX 50 (codinome Blackwell), promete ser o maior salto de desempenho de memória da última década. O grande protagonista dessa evolução é a implementação das memórias GDDR7, que elevarão a largura de banda a patamares antes restritos apenas a placas de data center de altíssimo custo.</p>
-                <h4 class="text-white font-bold text-lg mb-2 uppercase font-gaming">O Salto Tecnológico: Do GDDR6X ao GDDR7</h4>
-                <p class="mb-4">Utilizando modulação PAM3, o GDDR7 permite transmitir mais dados por ciclo de clock, resultando em maior eficiência energética e menor calor.</p>
-                <table class="tech-table">
-                    <thead><tr><th>Característica</th><th>RTX 4090 (GDDR6X)</th><th>RTX 5090 (GDDR7)</th></tr></thead>
-                    <tbody>
-                        <tr><td>Velocidade do Módulo</td><td>21 Gbps</td><td>32 Gbps</td></tr>
-                        <tr><td>Largura de Banda Total</td><td>~1.0 TB/s</td><td>~1.5 TB/s</td></tr>
-                    </tbody>
-                </table>
-            `, source: "NVIDIA Technical Blog / GamersNexus" },
-            { id: "news6", title: "Project Polaris: The Witcher na UE5", tag: "CD Projekt", content: "A transição da CDPR para a Unreal Engine 5 permitirá o uso de tecnologias como Lumen e Nanite no próximo The Witcher.", source: "CDPR Investor Relations" },
-            { id: "news7", title: "Hollow Knight Silksong: Novos Relatórios", tag: "Indie", content: "O desenvolvimento massivo de Silksong foca em Pharloom, com mais de 160 novos inimigos e sistemas de combate aéreos refinados.", source: "Team Cherry Blog" },
-            { id: "news8", title: "PS5 Pro PSSR: AI Upscaling", tag: "Sony", content: "O PlayStation Spectral Super Resolution promete reconstruir imagens de 1080p para 4K com fidelidade visual superior.", source: "Digital Foundry" },
-            { id: "news9", title: "Resident Evil 9: Rumores de Mundo Aberto", tag: "Capcom", content: "Relatos indicam que o RE9 usará o motor de Dragon's Dogma 2 para criar um ambiente de exploração mais vasto.", source: "Dusk Golem / VGC" },
-            { id: "news10", title: "Xbox Cloud: Jogue o que Comprar", tag: "Microsoft", content: "A Microsoft expandiu o Cloud Gaming para permitir o streaming de títulos comprados fora do catálogo do Game Pass.", source: "The Verge" },
-            { id: "news11", title: "Elden Ring: Legado de Shadow", tag: "FromSoft", content: "Shadow of the Erdtree estabeleceu um novo padrão para expansões, focando em densidade vertical.", source: "Bandai Namco" },
-            { id: "news12", title: "Doom: id Tech 8 Revelado", tag: "id Tech", content: "O novo motor gráfico da id Software foca em hordas massivas e destruição de voxels em tempo real.", source: "Bethesda Dev Blog" },
-            { id: "news13", title: "Monster Hunter Wilds: Clima", tag: "Capcom", content: "Sistemas climáticos extremos afetarão a ecologia dos monstros e a navegação no mundo aberto.", source: "TGS 2024 Recap" },
-            { id: "news14", title: "Cyberpunk Orion: Night City 2.0", tag: "CDPR", content: "A sequela focará em maior verticalidade urbana e um sistema de IA totalmente reconstruído.", source: "CDPR Dev Portal" },
-            { id: "news15", title: "Death Stranding 2: Tecnologia", tag: "Kojima", content: "Uso da Decima Engine atualizada para capturar performances faciais ultrarrealistas.", source: "Kojima Productions" },
-            { id: "news16", title: "Steam Deck 2: Filosofia", tag: "Valve", content: "Valve aguarda por um salto real em performance por watt antes de lançar o sucessor.", source: "Valve Interview" },
-            { id: "news17", title: "Fable: O Motor de Forza", tag: "Xbox", content: "A Playground Games está a aplicar o sistema de fotogrametria de Forza Horizon no mundo mágico de Albion.", source: "Playground Games" },
-            { id: "news18", title: "Kingdom Hearts 4: Quadratum", tag: "Square Enix", content: "A introdução de mundos urbanos realistas na Unreal Engine 5 marca o início da nova saga.", source: "Square Enix Event" },
-            { id: "news19", title: "Wolverine: Regeneração Real", tag: "Sony", content: "O jogo contará com um sistema de danos permanentes e regeneração de tecidos em tempo real.", source: "Insomniac Leaks" },
-            { id: "news20", title: "Project White Sands: Rumor", tag: "Valve", content: "Codinomes apontam para um novo projeto Single-Player da Valve no universo Half-Life.", source: "SteamDB" },
-            { id: "news21", title: "AC Shadows: Japão Feudal", tag: "Ubisoft", content: "Dualidade de combate e furtividade com novas mecânicas de luz e sombra dinâmicas.", source: "Ubisoft Forward" },
-            { id: "news22", title: "Mercado de Handheld PCs", tag: "Hardware", content: "A ascensão de dispositivos portáteis está a forçar a Microsoft a otimizar o Windows.", source: "Digital Trends" },
-            { id: "news23", title: "Neo NPCs: Diálogos por IA", tag: "Ubisoft", content: "Ubisoft testa diálogos gerados em tempo real com NPCs via LLMs integrados.", source: "GDC 2024" },
-            { id: "news24", title: "FFVII Rebirth no PC: Rumores", tag: "Square Enix", content: "Otimização para resoluções ultrawide e Ray Tracing avançado esperados para 2025.", source: "Square Enix IR" },
-            { id: "news25", title: "Tomb Raider: Nova Era", tag: "Amazon", content: "A unificação das cronologias de Lara Croft será o foco do novo título desenvolvido na UE5.", source: "Crystal Dynamics" },
-            { id: "news26", title: "Game Pass: Estratégia de Preço", tag: "Microsoft", content: "Mudanças nos planos visam sustentar o lançamento de títulos AAA Day One.", source: "Microsoft Reports" },
-            { id: "news27", title: "BGE2: Atualização de Status", tag: "Ubisoft", content: "Beyond Good & Evil 2 continua em desenvolvimento mas com escopo ajustado.", source: "Ubisoft Earnings" },
-            { id: "news28", title: "Starfield Shattered Space", tag: "Bethesda", content: "A expansão foca em elementos de terror e exploração no planeta natal dos Va'ruun.", source: "Bethesda" },
-            { id: "news29", title: "Kingdom Come II: Realismo", tag: "Warhorse", content: "A sequela promete combate histórico refinado e cidade de Kuttenberg recriada em 1:1.", source: "Deep Silver" },
-            { id: "news30", title: "Intel Arrow Lake: Eficiência", tag: "Intel", content: "Nova arquitetura foca em performance por watt e NPUs para gaming com IA.", source: "Intel Keynote" },
-            { id: "news31", title: "TLOU Part III: Rumores", tag: "Naughty Dog", content: "Pré-produção aponta para salto tecnológico em animação facial e física.", source: "VGC" },
-            { id: "news32", title: "Gamescom 2025: Expectativas", tag: "Evento", content: "Retorno de grandes conferências e gameplays inéditos aguardados.", source: "Gamescom Official" },
-            { id: "news33", title: "AMD Ryzen 9000X3D: Performance", tag: "AMD", content: "Novos CPUs prometem dominar o gaming com tecnologia 3D V-Cache.", source: "AMD Computex" },
-            { id: "news34", title: "Half-Life Alyx no PS VR2", tag: "VR", content: "Rumores indicam Valve e Sony fechando acordo para trazer VR definitiva ao PS5.", source: "PSVR News" }
+            { id: "news1", title: "GTA VI: IA de NPCs e Física Dinâmica", tag: "Rockstar Games", content: "Análise técnica do motor RAGE 9 focado em IA persistente e física procedural.", source: "Rockstar Newswire / Bloomberg" },
+            { id: "news5", title: "RTX 5090 Blackwell: A Revolução das Memórias GDDR7", tag: "NVIDIA Tech", content: `<p class="mb-4">A série GeForce RTX 50 promete ser o maior salto de desempenho de memória da última década com GDDR7.</p><table class="tech-table"><thead><tr><th>Característica</th><th>RTX 4090</th><th>RTX 5090</th></tr></thead><tbody><tr><td>Largura Banda</td><td>~1.0 TB/s</td><td>~1.5 TB/s</td></tr></tbody></table>`, source: "NVIDIA Technical Blog" },
+            { id: "news33", title: "AMD Ryzen 9000X3D: Performance", tag: "AMD", content: "Novos CPUs prometem dominar o gaming com tecnologia 3D V-Cache.", source: "AMD Computex" }
         ];
 
         function showSection(sectionId) {
@@ -388,13 +422,10 @@
             sections.forEach(s => s.classList.remove('active'));
             const buttons = document.querySelectorAll('.nav-btn');
             buttons.forEach(b => b.classList.remove('nav-btn-active'));
-            
             const element = document.getElementById(sectionId);
             if (element) element.classList.add('active');
-            
             const activeBtn = document.getElementById('btn-' + sectionId);
             if(activeBtn) activeBtn.classList.add('nav-btn-active');
-
             if (sectionId === 'noticias') closeNews();
             window.scrollTo(0, 0);
         }
@@ -402,25 +433,12 @@
         function openNews(newsId) {
             const news = newsData.find(n => n.id === newsId);
             if (!news) return;
-
             const list = document.getElementById('noticias-lista');
             const container = document.getElementById('news-container');
             const wrapper = document.getElementById('news-details-wrapper');
-            
             list.classList.add('hidden');
             container.classList.remove('hidden');
-            
-            wrapper.innerHTML = `
-                <div class="news-detail active space-y-6">
-                    <span class="source-tag">${news.tag}</span>
-                    <h2 class="text-4xl font-gaming font-bold leading-tight text-primary">${news.title}</h2>
-                    <div class="text-slate-300 text-lg leading-relaxed">${news.content}</div>
-                    <div class="bg-slate-800/50 p-6 rounded-xl border border-white/5 mt-8">
-                        <h5 class="text-white font-bold mb-2 uppercase tracking-widest text-xs">Fontes:</h5>
-                        <p class="text-sm text-slate-400 font-bold">${news.source}</p>
-                    </div>
-                </div>
-            `;
+            wrapper.innerHTML = `<div class="news-detail active space-y-6"><span class="source-tag">${news.tag}</span><h2 class="text-4xl font-gaming font-bold leading-tight text-primary">${news.title}</h2><div class="text-slate-300 text-lg leading-relaxed">${news.content}</div><p class="text-sm text-slate-400 font-bold">Fonte: ${news.source}</p></div>`;
             window.scrollTo(0, 0);
         }
 
@@ -434,17 +452,7 @@
         function initNewsGrid() {
             const grid = document.getElementById('news-grid');
             if(!grid) return;
-            grid.innerHTML = newsData.map(news => `
-                <article class="glass-card rounded-xl overflow-hidden cursor-pointer" onclick="openNews('${news.id}')">
-                    <div class="h-40 bg-slate-800 flex items-center justify-center p-4">
-                        <svg class="h-20 w-20 opacity-20"><use xlink:href="#icon-gamerterapia"></use></svg>
-                    </div>
-                    <div class="p-4">
-                        <span class="source-tag">${news.tag}</span>
-                        <h3 class="text-lg font-gaming font-bold mt-2 line-clamp-2">${news.title}</h3>
-                    </div>
-                </article>
-            `).join('');
+            grid.innerHTML = newsData.map(news => `<article class="glass-card rounded-xl overflow-hidden cursor-pointer" onclick="openNews('${news.id}')"><div class="h-40 bg-slate-800 flex items-center justify-center p-4"><svg class="h-20 w-20 opacity-20"><use xlink:href="#icon-gamerterapia"></use></svg></div><div class="p-4"><span class="source-tag">${news.tag}</span><h3 class="text-lg font-gaming font-bold mt-2 line-clamp-2">${news.title}</h3></div></article>`).join('');
         }
 
         window.onload = () => {
